@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../constants";
+import { Image } from 'astro:assets';
+import sectionPicture from '../images/section-picture.jpg';
+
+---
+
+<Layout title="About", description={SITE_DESCRIPTION}, current="about">
+    <div class="container max-w-[1120px] flex flex-wrap items-center mx-auto p-4">
+        <Image src={sectionPicture} height="320" alt="Section Picture" />
+
+        <h1 class="text-5xl font-bold mt-10 mb-6">About</h1>
+
+        <p class="text-lg font-regular font-serif mb-6">
+            Currently living in Vienna, Austria, I am exploring as artist, educator and life-long learner the multifaceted relationships between music and movement in a variety of processes. I delight in taking on various roles in different projects: mainly composer, and also performing musician, teacher, choreographer, movement artist and researcher. Before moving to Vienna in November 2019, I worked for more than two decades in South Africa as composer and lecturer at the North-West University in Potchefstroom.
+        </p>
+
+        <a href="/information" class="underline underline-offset-8 hover:text-blue-700">More Information</a>
+    </div>
+</Layout>
