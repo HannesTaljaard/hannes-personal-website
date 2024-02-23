@@ -1,7 +1,7 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-// export const NAME = 'Hannes Taljaard';
+export const NAME = 'Hannes Taljaard';
 export const SITE_TITLE = 'Hannes Taljaard | Composer';
 export const SITE_DESCRIPTION = 'Official Website';
 export const HOMEPAGE_URL = 'https://hannestaljaard.com';
@@ -19,6 +19,18 @@ export const SITE_NAVIGATION = [
     {
         name: 'compositions',
         href: '/compositions'
+    },
+    {
+        name: 'performances',
+        href: '/performances'
+    },
+    {
+        name: 'projects',
+        href: '/projects'
+    },
+    {
+        name: 'information',
+        href: '/information'
     },
     {
         name: 'contact',

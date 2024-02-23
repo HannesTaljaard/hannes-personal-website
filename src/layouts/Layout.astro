@@ -24,11 +24,15 @@ const { title, description, current } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header current={current} />
-		<main>
-			<slot />
-		</main>
-		<Footer />
+		
+		<!-- <div class="w-[1120px] mx-auto"> -->
+			<Header current={current} />
+			<main>
+				<slot />
+			</main>
+			<Footer />
+		<!-- </div> -->
+		
 	</body>
 </html>
 <style is:global>
@@ -60,3 +64,4 @@ const { title, description, current } = Astro.props;
 			monospace;
 	}
 </style>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
