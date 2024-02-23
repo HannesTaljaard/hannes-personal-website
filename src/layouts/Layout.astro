@@ -20,7 +20,7 @@ interface Props {
 	current?: string;
 }
 
-const { title, description, current } = Astro.props;
+const { title, description, current="home" } = Astro.props;
 ---
 
 <!doctype html>
@@ -34,20 +34,16 @@ const { title, description, current } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		
-		<!-- <div class="w-[1120px] mx-auto"> -->
-			<Header current={current} />
-			<main>
-				<slot />
-			</main>
-			<Footer />
-		<!-- </div> -->
-		
+		<Header current={current} />
+		<main>
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
+		/* --accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
 		--accent-gradient: linear-gradient(
@@ -55,12 +51,12 @@ const { title, description, current } = Astro.props;
 			rgb(var(--accent)),
 			rgb(var(--accent-light)) 30%,
 			white 60%
-		);
+		); */
 	}
 	html {
 		/* font-family: system-ui, sans-serif; */
-		background: #13151a;
-		background-size: 224px;
+		/* background: #13151a;
+		background-size: 224px; */
 	}
 	/* code {
 		font-family:
@@ -74,4 +70,6 @@ const { title, description, current } = Astro.props;
 			monospace;
 	} */
 </style>
+
+<!-- Flowbite js functionality import  -->
 <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
