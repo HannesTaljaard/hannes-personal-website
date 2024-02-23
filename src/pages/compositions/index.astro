@@ -1,9 +1,70 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import sectionPicture from '../../images/section-picture.jpg';
+// Icons managed with astro-icon + icon package (@iconify-json/ph)
+import { Icon } from 'astro-icon/components'
 
 const title = 'Compositions';
+const description = 'Compositions';
 ---
 
-<Layout title={title}>
-todo
+<Layout title={title}, description={description} current="compositions">
+    <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
+        <Image src={sectionPicture} alt="Section Picture" />
+
+        <h1 class="text-5xl font-bold mt-10 mb-6">Compositions</h1>
+        
+        <form>   
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for Instrumentation..." required />
+                <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+            </div>
+        </form>
+
+        <ul class="flex flex-row flex-nowrap overflow-x-auto space-x-4 my-8">
+            <li class="flex flex-row flex-nowrap justify-center items-center space-x-1 text-gray-400 hover:text-black">
+                <a href="#" class="uppercase text-nowrap">orchestra</a>
+                <Icon name="ph:arrow-down-light" width=16 height=16 />
+            </li>
+
+            <li class="flex flex-row flex-nowrap justify-center items-center space-x-1 text-gray-400 hover:text-black">
+                <a href="#" class="uppercase text-nowrap">solo</a>
+                <Icon name="ph:arrow-down-light" width=16 height=16 />
+            </li>
+
+            <li class="flex flex-row flex-nowrap justify-center items-center space-x-1 text-gray-400 hover:text-black">
+                <a href="#" class="uppercase text-nowrap">small ensemble</a>
+                <Icon name="ph:arrow-down-light" width=16 height=16 />
+            </li>
+
+            <li class="flex flex-row flex-nowrap justify-center items-center space-x-1 text-gray-400 hover:text-black">
+                <a href="#" class="uppercase text-nowrap">vocal</a>
+                <Icon name="ph:arrow-down-light" width=16 height=16 />
+            </li>
+
+            <li class="flex flex-row flex-nowrap justify-center items-center space-x-1 text-gray-400 hover:text-black">
+                <a href="#" class="uppercase text-nowrap">piano</a>
+                <Icon name="ph:arrow-down-light" width=16 height=16 />
+            </li>
+
+        </ul>
+
+        <h2 id="category1" class="text-2xl font-bold mb-6">Orchestra</h2>
+
+        <div id="entry-item-1" class="font-serif">
+            <div class="text-xl font-semibold mb-2">
+                <a>Symphony No. 434 (2024)</a>
+                <!-- Arrow -->
+            </div>
+            <span class="italic text-lg">for 5 singers, instrumental ensemble (5 musicians) and electronics</span>
+        </div>
+
+    </div>
 </Layout>
