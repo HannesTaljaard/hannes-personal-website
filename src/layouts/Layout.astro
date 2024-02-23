@@ -3,6 +3,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../constants";
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
+// Fonts added and managed via https://fontsource.org/
+// Supports weights 400-700
+import '@fontsource-variable/lora';
+// Supports weights 400-700
+import '@fontsource-variable/lora/wght-italic.css';
+// Supports weights 100-900
+import '@fontsource-variable/montserrat';
+// Supports weights 100-900
+import '@fontsource-variable/montserrat/wght-italic.css';
+
 // Activate if you want to have the props necessary on each page
 interface Props {
 	title: string;
@@ -48,11 +58,11 @@ const { title, description, current } = Astro.props;
 		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		/* font-family: system-ui, sans-serif; */
 		background: #13151a;
 		background-size: 224px;
 	}
-	code {
+	/* code {
 		font-family:
 			Menlo,
 			Monaco,
@@ -62,6 +72,6 @@ const { title, description, current } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
-	}
+	} */
 </style>
 <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
