@@ -1,23 +1,34 @@
 ---
+import { SITE_TITLE, SITE_DESCRIPTION } from "../constants";
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// Activate if you want to have the props necessary on each page
 interface Props {
 	title: string;
+	description?: string;
+	current?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, current } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<Header current={current} />
+		<main>
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
 <style is:global>
