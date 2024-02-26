@@ -4,6 +4,7 @@ import { Image } from 'astro:assets';
 import sectionPicture from '../../images/section-picture.jpg';
 // Icons managed with astro-icon + icon package (@iconify-json/ph)
 import { Icon } from 'astro-icon/components'
+import CompositionCard from '../../components/CompositionCard.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
@@ -78,27 +79,15 @@ const description = 'Compositions';
 
         <h2 id="category-orchestra" class="text-2xl font-bold mb-6">Orchestra</h2>
 
-        {orchestralCompositions.map(compositon => (
-            <div id="entry-item-1" class="font-serif">
-            <a href={'/compositions/' + compositon.slug} class="text-xl font-semibold mb-2 flex items-center space-x-2 hover:underline underline-offset-8">
-                <span>{compositon.data.title} ({compositon.data.year})</span>
-                <Icon name="ph:arrow-right" widths="20" x-height="20" />
-            </a>
-            <span class="italic text-lg">{compositon.data.subtitle}</span>
-        </div>
+        {orchestralCompositions.map(composition => (
+            <CompositionCard composition={composition} />
         ))}
 
         <h2 id="category-solo" class="text-2xl font-bold mt-16 mb-6">Solo</h2>
 
         <div class=" flex flex-col space-y-4">
-            {soloCompositions.map(compositon => (
-            <div id="entry-item-1" class="font-serif">
-                <a href={'/compositions/' + compositon.slug} class="text-xl font-semibold mb-2 flex items-center space-x-2 hover:underline underline-offset-8">
-                    <span>{compositon.data.title} ({compositon.data.year})</span>
-                    <Icon name="ph:arrow-right" widths="20" x-height="20" />
-                </a>
-                <span class="italic text-lg">{compositon.data.subtitle}</span>
-            </div>
+            {soloCompositions.map(composition => (
+                <CompositionCard composition={composition} />
             ))}
         </div>
 
