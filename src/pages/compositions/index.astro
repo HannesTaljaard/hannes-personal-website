@@ -29,29 +29,29 @@ const description = 'Compositions';
         </form>
 
         <ul class="flex flex-row flex-nowrap overflow-x-auto space-x-4 my-8">
-            <li class="flex flex-row flex-nowrap justify-center items-center space-x-1 text-gray-400 hover:text-black">
+            <li class="flex flex-row flex-nowrap items-center space-x-1 text-gray-400 hover:text-black">
                 <a href="#" class="uppercase text-nowrap">orchestra</a>
-                <Icon name="ph:arrow-down-light" width=16 height=16 />
+                <Icon name="ph:arrow-down-light" widths=16 x-height=16 />
             </li>
 
-            <li class="flex flex-row flex-nowrap justify-center items-center space-x-1 text-gray-400 hover:text-black">
+            <li class="flex flex-row flex-nowrap items-center space-x-1 text-gray-400 hover:text-black">
                 <a href="#" class="uppercase text-nowrap">solo</a>
-                <Icon name="ph:arrow-down-light" width=16 height=16 />
+                <Icon name="ph:arrow-down-light" widths=16 x-height=16 />
             </li>
 
-            <li class="flex flex-row flex-nowrap justify-center items-center space-x-1 text-gray-400 hover:text-black">
+            <li class="flex flex-row flex-nowrap items-center space-x-1 text-gray-400 hover:text-black">
                 <a href="#" class="uppercase text-nowrap">small ensemble</a>
-                <Icon name="ph:arrow-down-light" width=16 height=16 />
+                <Icon name="ph:arrow-down-light" widths=16 x-height=16 />
             </li>
 
-            <li class="flex flex-row flex-nowrap justify-center items-center space-x-1 text-gray-400 hover:text-black">
+            <li class="flex flex-row flex-nowrap items-center space-x-1 text-gray-400 hover:text-black">
                 <a href="#" class="uppercase text-nowrap">vocal</a>
-                <Icon name="ph:arrow-down-light" width=16 height=16 />
+                <Icon name="ph:arrow-down-light" widths=16 x-height=16 />
             </li>
 
-            <li class="flex flex-row flex-nowrap justify-center items-center space-x-1 text-gray-400 hover:text-black">
+            <li class="flex flex-row flex-nowrap items-center space-x-1 text-gray-400 hover:text-black">
                 <a href="#" class="uppercase text-nowrap">piano</a>
-                <Icon name="ph:arrow-down-light" width=16 height=16 />
+                <Icon name="ph:arrow-down-light" widths=16 x-height=16 />
             </li>
 
         </ul>
@@ -59,12 +59,15 @@ const description = 'Compositions';
         <h2 id="category1" class="text-2xl font-bold mb-6">Orchestra</h2>
 
         <div id="entry-item-1" class="font-serif">
-            <div class="text-xl font-semibold mb-2">
-                <a>Symphony No. 434 (2024)</a>
+            <a href="#" class="text-xl font-semibold mb-2 flex items-center space-x-2 hover:underline underline-offset-8">
+                <span>Symphony No. 434 (2024)</span>
                 <!-- Arrow -->
-            </div>
+                <Icon name="ph:arrow-right" widths=20 x-height=20/>
+            </a>
             <span class="italic text-lg">for 5 singers, instrumental ensemble (5 musicians) and electronics</span>
         </div>
 
     </div>
 </Layout>
+
+<!-- https://stackoverflow.com/questions/48304219/how-to-apply-css-transform-to-child-on-parent-hover -->
