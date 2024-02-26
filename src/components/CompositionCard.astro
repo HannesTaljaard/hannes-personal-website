@@ -3,11 +3,12 @@
 import { Icon } from 'astro-icon/components'
 import type { CollectionEntry } from "astro:content";
 
-const { composition } = Astro.props;
-
 interface Props {
     composition: CollectionEntry<'compositions'>;
 }
+
+const { composition } = Astro.props;
+
 ---
 
 <div id="entry-item-1" class="font-serif">
