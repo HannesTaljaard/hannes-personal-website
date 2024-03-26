@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 // import { Icon } from 'astro-icon';
-import { FOOTER_SOCIALS } from "../constants";
+import { NAME } from "../constants";
 
 const today = new Date();
 
@@ -9,9 +9,24 @@ const today = new Date();
 ---
 
 <footer id="footer">
-    <div class="bg-gray-200">
-        <div class="container max-w-[1120px] flex flex-wrap items-center mx-auto p-4">
-            todo
+    <div class="bg-gray-100">
+        <div class="container max-w-[1120px] divide-y flex flex-col mx-auto p-4 pb-2">
+            <!-- Upper Part -->
+            <div class="font-serif flex items-end justify-between pb-4">
+				<!-- Logo -->
+				<a href="/" class="text-2xl uppercase font-medium tracking-widest hover:text-neutral-600 md:text-xl">{NAME}</a>
+                <!-- Right Section -->
+                <a href="/contact" class="text-sm hover:text-blue-800">Contact</a>
+            </div>
+            <!-- Lower Part -->
+            <div class="flex items-center justify-between pt-2">
+                <div class="text-xs text-neutral-400">&copy; {today.getFullYear()} {NAME}. All Rights Reserved.</div>
+                <div>
+                    <a href="/imprint" class="text-xs text-neutral-400 hover:text-neutral-900">Imprint</a>
+                    <span class="text-neutral-400">&middot;</span>
+                    <a href="/privacy" class="text-xs text-neutral-400 hover:text-neutral-900">Privacy</a>
+                </div>
+            </div>
         </div>
     </div>
 

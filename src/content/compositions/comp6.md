@@ -1,8 +1,8 @@
 ---
-title: 'Composition 1'
-subtitle: 'for Orchestra'
+title: 'Composition 6'
+subtitle: 'for Piano and Violin'
 year: 2024
-category: 'orchestra'
+category: 'piano'
 scoreURL: '/public/scores/Rumunska Igra v4.pdf'
 ---
 

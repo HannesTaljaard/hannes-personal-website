@@ -6,7 +6,8 @@ import { defineCollection, z } from "astro:content";
         title: z.string(),
         subtitle: z.string(),
         year: z.number(),
-        category: z.enum(['orchestra', 'solo']),
+        category: z.enum(['orchestra', 'solo', 'piano']),
+        scoreURL: z.string().url()
     })
  });
 
