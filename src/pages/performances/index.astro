@@ -1,13 +1,109 @@
 ---
 import { NAME } from "../../constants";
 import Layout from "../../layouts/Layout.astro";
-
+import { Image } from 'astro:assets';
+import sectionPicture from '../../images/section-picture.jpg';
+// Icons managed with astro-icon + icon package (@iconify-json/ph)
+import { Icon } from 'astro-icon/components';
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import { formatDate } from "../../utils";
 
 // Date formatting and sorting by date
 // https://youtu.be/XoIHKO6AkoM?si=QUUo2D6rJ4_AD2Hx&t=4022
 
+// Sorted by Date descending
+const allPerformances: CollectionEntry<'performances'>[] = (await getCollection('performances'))
+    .sort((a:CollectionEntry<'performances'>, b:CollectionEntry<'performances'>) =>
+    b.data.performanceDate.valueOf() - a.data.performanceDate.valueOf());
+
+// An array of available years i.e. years in which at least one performance happened
+const years = [...new Set(allPerformances.map((performance) => performance.data.performanceDate.getFullYear()).flat())];
+
+const performancesPerYear = new Map<string, CollectionEntry<'performances'>[]>();
+
+allPerformances.map(performance => {
+    if (performancesPerYear.has(performance.data.performanceDate.getFullYear())) {
+        let performancesPerOneYear: CollectionEntry<'performances'>[] = performancesPerYear.get(performance.data.performanceDate.getFullYear())!;
+        performancesPerOneYear.push(performance);
+        performancesPerYear.set(performance.data.performanceDate.getFullYear(), performancesPerOneYear);
+        return;
+    }
+    performancesPerYear.set(performance.data.performanceDate.getFullYear(), [performance]);
+});
+
+console.log(performancesPerYear);
+
+performancesPerYear.forEach((value, key) => {
+console.log(key);
+
+});
+
+const title = 'Performances';
+const description = 'Performances';
 ---
 
-<Layout title = 'Performances', current="performances">
-todo
+<Layout title={title}, description={description} current="performances">
+    <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
+        <Image src={sectionPicture} alt="Section Picture" />
+
+        <h1 class="text-5xl font-bold mt-10 mb-8">Performances</h1>
+
+        <ul class="flex flex-row flex-nowrap overflow-x-auto space-x-4 mb-8">
+            {years.map(year => (
+                <a href={'#year-' + year}>
+                    <li class="flex flex-row flex-nowrap items-center space-x-1 text-gray-400 hover:text-black">
+                        <span class="uppercase text-nowrap">{year}</span>
+                        <Icon name="ph:arrow-down-light" widths="16" x-height="16" />
+                    </li>
+                </a>
+            ))}
+        </ul>
+
+
+        {years.map(year => (
+            <h2 id={'year-' + year} class="text-2xl font-bold mb-6">{year}</h2>
+            <div class="flex flex-col space-y-12 mb-20">
+                {performancesPerYear.get(year)!.map(performance => (
+                    <div class="font-serif">
+                    <div class="text-sm font-sans text-gray-500 mb-2 tracking-widest">{'MY ' + performance.data.kind.toUpperCase()}</div>
+                    <div class="text-xl font-medium mb-2">{performance.data.title}</div>
+                    <div class="mb-4">
+                        {performance.data.performer.map(performer => (
+                        <div class="font-medium">{performer.split(",")[0]}<span class=" text-gray-500">, {performer.split(",")[1]}</span></div>
+                        ))}
+                    </div>
+                    <div class="text-gray-500">
+                        <div class="text-sm mb-1">{formatDate(performance.data.performanceDate)}</div>
+                        <div class="text-sm mb-4">{performance.data.location}</div>
+                    </div>
+                    <p>{performance.body}</p>
+                </div>
+            ))}
+            </div>
+        ))}
+
+        <!-- <h2 id="year-2024" class="text-2xl font-bold mb-6">2024</h2>
+
+        <div class="flex flex-col space-y-12">
+            {allPerformances.map(performance => (
+                <div class="font-serif">
+                    <div class="text-sm font-sans text-gray-500 mb-2 tracking-widest">{'MY ' + performance.data.kind.toUpperCase()}</div>
+                    <div class="text-xl font-medium mb-2">{performance.data.title}</div>
+                    <div class="mb-4">
+                        {performance.data.performer.map(performer => (
+                        <div class="font-medium">{performer.split(",")[0]}<span class=" text-gray-500">, {performer.split(",")[1]}</span></div>
+                        ))}
+                    </div>
+                    <div class="text-gray-500">
+                        <div class="text-sm mb-1">{formatDate(performance.data.performanceDate)}</div>
+                        <div class="text-sm mb-4">{performance.data.location}</div>
+                    </div>
+                    <p>{performance.body}</p>
+                </div>
+            ))}
+        </div> -->
+
+
+    </div>
 </Layout>

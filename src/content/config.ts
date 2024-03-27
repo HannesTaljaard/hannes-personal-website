@@ -11,14 +11,18 @@ import { defineCollection, z } from "astro:content";
     })
  });
 
- const performances = defineCollection({
-    type: 'data',
+ const performanceCollection = defineCollection({
+    type: 'content',
     schema: z.object({
-        title: z.string(), // TODO
+        kind: z.enum(['composition', 'performance']),
+        title: z.string(),
+        performer: z.array(z.string()),
+        performanceDate: z.date(),
+        location: z.string()
     })
   });
 
 export const collections = {
     'composition': compositionCollection,
-    'performance': performances
+    'performance': performanceCollection
 }
