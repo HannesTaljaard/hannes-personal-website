@@ -69,7 +69,7 @@ const description = 'Performances';
                     <div class="text-sm font-sans text-gray-500 mb-2 tracking-widest">{'MY ' + performance.data.kind.toUpperCase()}</div>
                     <div class="text-xl font-medium mb-2">{performance.data.title}</div>
                     <div class="mb-4">
-                        {performance.data.performer.map(performer => (
+                        {performance.data.performer.map((performer: string) => (
                         <div class="font-medium">{performer.split(",")[0]}<span class=" text-gray-500">, {performer.split(",")[1]}</span></div>
                         ))}
                     </div>
