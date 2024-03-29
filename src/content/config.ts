@@ -32,8 +32,20 @@ const projectCollection = defineCollection({
     })
 });
 
+const scholarlyCollection = defineCollection({
+    type: 'content',
+    schema: z.object({
+        title: z.string(),
+        authors: z.string().array(),
+        publishedIn: z.string(),
+        yearPublished: z.number(),
+        doiURL: z.string().url()
+    })
+});
+
 export const collections = {
     'composition': compositionCollection,
     'performance': performanceCollection,
-    'project': projectCollection
+    'project': projectCollection,
+    'scholarly': scholarlyCollection
 }

@@ -30,13 +30,59 @@ export const SITE_NAVIGATION = [
     },
     {
         name: 'information',
-        href: '/information'
+        href: '/information',
+        submenu: [
+            {
+                name: 'biography',
+                href: '/biography'
+            },
+            {
+                name: 'photos',
+                href: '/photos'
+            },
+            {
+                name: 'scholarly',
+                href: '/scholarly'
+            },
+            {
+                name: 'my thoughts',
+                href: '/mythoughts'
+            },
+            {
+                name: 'recordings',
+                href: '/recordings'
+            }
+        ]
     },
     {
         name: 'contact',
         href: '/contact'
     },
 ]
+
+// Available navigation or pages for the information navigation
+// export const INFORMATION_NAVIGATION = [
+//     {
+//         name: 'biography',
+//         href: '/biography'
+//     },
+//     {
+//         name: 'photos',
+//         href: '/photos'
+//     },
+//     {
+//         name: 'scholarly',
+//         href: '/scholarly'
+//     },
+//     {
+//         name: 'my thoughts',
+//         href: '/mythoughts'
+//     },
+//     {
+//         name: 'recordings',
+//         href: '/recordings'
+//     }
+// ]
 
 // Browse here: https://icon-sets.iconify.design/
 export const FOOTER_SOCIALS = [
