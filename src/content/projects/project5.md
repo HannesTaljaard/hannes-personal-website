@@ -1,8 +1,7 @@
 ---
-kind: 'composition'
-title: 'Symphony No. 123'
-performer: ['Wiener Symphoniker, Orchester', 'Hannes Taljaard, Dirigent']
-performanceDate: 2024-01-10
-location: 'Wiener Konzerthaus | Mozart-Saal'
+title: 'Project Name 1'
+startDate: 2022-01-15
+endDate: 2023-05-10
+imgURL: '/images/main-picture.jpeg'
 ---
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.

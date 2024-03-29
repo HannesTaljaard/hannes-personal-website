@@ -1,6 +1,6 @@
 import { defineCollection, z } from "astro:content";
 
- const compositionCollection = defineCollection({
+const compositionCollection = defineCollection({
     type: 'content',
     schema: z.object({
         title: z.string(),
@@ -9,9 +9,9 @@ import { defineCollection, z } from "astro:content";
         category: z.enum(['orchestra', 'solo', 'piano']),
         scoreURL: z.string().url()
     })
- });
+});
 
- const performanceCollection = defineCollection({
+const performanceCollection = defineCollection({
     type: 'content',
     schema: z.object({
         kind: z.enum(['composition', 'performance']),
@@ -20,9 +20,20 @@ import { defineCollection, z } from "astro:content";
         performanceDate: z.date(),
         location: z.string()
     })
-  });
+});
+
+const projectCollection = defineCollection({
+    type: 'content',
+    schema: z.object({
+        title: z.string(),
+        startDate: z.date(),
+        endDate: z.date().optional(),
+        imgURL: z.string().url()
+    })
+});
 
 export const collections = {
     'composition': compositionCollection,
-    'performance': performanceCollection
+    'performance': performanceCollection,
+    'project': projectCollection
 }

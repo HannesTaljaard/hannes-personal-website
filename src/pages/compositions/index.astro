@@ -47,7 +47,7 @@ const description = 'Compositions';
 
         <h2 id="category-orchestra" class="text-2xl font-bold mb-6">Orchestra</h2>
 
-        <div class="flex flex-col space-y-4 mb-20">
+        <div class="flex flex-col space-y-4 mb-16">
             {orchestralCompositions.map(composition => (
                 // <CompositionCard composition={composition} />
                 <div class="font-serif">
@@ -60,9 +60,9 @@ const description = 'Compositions';
             ))}
         </div>
 
-        <h2 id="category-solo" class="text-2xl font-bold mt-16 mb-6">Solo</h2>
+        <h2 id="category-solo" class="text-2xl font-bold mb-6">Solo</h2>
 
-        <div class="flex flex-col space-y-4 mb-20">
+        <div class="flex flex-col space-y-4 mb-16">
             {soloCompositions.map(composition => (
                 <div class="font-serif">
                     <a href={'/compositions/' + composition.slug} class="text-xl font-semibold mb-2 flex items-center space-x-2 hover:underline underline-offset-8">
@@ -74,9 +74,9 @@ const description = 'Compositions';
             ))}
         </div>
 
-        <h2 id="category-piano" class="text-2xl font-bold mt-16 mb-6">Piano</h2>
+        <h2 id="category-piano" class="text-2xl font-bold mb-6">Piano</h2>
 
-        <div class="flex flex-col space-y-4 mb-20">
+        <div class="flex flex-col space-y-4 mb-16">
             {pianoCompositions.map(composition => (
                 <div class="font-serif">
                     <a href={'/compositions/' + composition.slug} class="text-xl font-semibold mb-2 flex items-center space-x-2 hover:underline underline-offset-8">
