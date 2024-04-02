@@ -1,0 +1,42 @@
+---
+import { NAME } from "../../constants";
+import Layout from "../../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import sectionPicture from '../../images/section-picture.jpg';
+// Icons managed with astro-icon + icon package (@iconify-json/ph)
+import { Icon } from 'astro-icon/components';
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import { formatDate } from "../../utils";
+
+// Sorted by Date descending
+const myThoughts: CollectionEntry<'my-thoughts'>[] = (await getCollection('my-thoughts'))
+    .sort((a:CollectionEntry<'my-thoughts'>, b:CollectionEntry<'my-thoughts'>) =>
+    b.data.datePublished.valueOf() - a.data.datePublished.valueOf());
+
+const title = 'My Thoughts';
+const description = 'My Thoughts';
+---
+
+<Layout title={title}, description={description} current="my-thoughts">
+    <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
+        <Image src={sectionPicture} alt="Section Picture" />
+
+        <h1 class="text-5xl font-bold mt-10 mb-8">My Thoughts</h1>
+
+        <div class="flex flex-col divide-y mb-20">
+            {myThoughts.map(article => (
+                <div class="font-serif py-6 first:pt-0 last:pb-0">
+                    <div class="text-xl font-medium mb-6">{article.data.name}</div>
+                    <p class="line-clamp-3 text-gray-500 mb-6">{article.body}</p>
+                    <a href={'/my-thoughts/' + article.slug} class="font-sans flex items-center space-x-2 text-blue-800 hover:underline underline-offset-8">
+                        <span>Read More</span>
+                        <Icon name="ph:arrow-right" widths="20" x-height="20"/>
+                    </a>  
+                </div>
+                
+            ))}
+        </div>
+
+    </div>
+</Layout>

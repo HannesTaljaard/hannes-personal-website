@@ -46,7 +46,7 @@ export const SITE_NAVIGATION = [
             },
             {
                 name: 'my thoughts',
-                href: '/mythoughts'
+                href: '/my-thoughts'
             },
             {
                 name: 'recordings',

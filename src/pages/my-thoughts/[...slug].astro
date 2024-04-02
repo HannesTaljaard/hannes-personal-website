@@ -1,0 +1,55 @@
+---
+import { NAME } from "../../constants";
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+// Icons managed with astro-icon + icon package (@iconify-json/ph)
+import { Icon } from 'astro-icon/components';
+import readingTime from 'reading-time';
+import type { MarkdownContent } from "astro";
+
+// Static Website Aproach
+export async function getStaticPaths() {
+    const myThoughts: CollectionEntry<'my-thoughts'>[] = await getCollection('my-thoughts');
+
+    return myThoughts.map(article => ({
+        params: {
+            slug: article.slug
+        },
+        props: {article}
+    }));
+}
+
+const { article } = Astro.props;
+// https://docs.astro.build/en/tutorials/add-content-collections/#generate-pages-from-a-collection
+const { Content } = await article.render();
+
+---
+
+<Layout title = {article.data.name + ' | ' + NAME}, current="my-thoughts">
+    <div class="container max-w-[1120px] flex flex-col items-start mx-auto p-4">
+        <a href="/my-thoughts" class="flex items-center space-x-2 text-blue-800 hover:underline underline-offset-8">
+            <Icon name="ph:arrow-left" widths="20" x-height="20"/>
+            <span>Back to My Thoughts</span>
+        </a>
+
+        <article>
+        <h1 class="text-5xl font-bold font-sans mt-8 mb-2">{article.data.name}</h1>
+
+        <div class="mb-20">
+            <div class="font-serif text-gray-500 mb-8">
+                <span>{ NAME }</span>
+                <span class="mx-1">&middot;</span>
+                <span>{readingTime(article.body).text}</span>
+            </div>
+
+            <div class="prose prose-lg prose-neutral max-w-none">
+                <Content/>
+            </div>
+            
+        </div>
+        </article>
+
+
+    </div>
+</Layout>

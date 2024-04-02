@@ -43,9 +43,18 @@ const scholarlyCollection = defineCollection({
     })
 });
 
+const myThoughtsCollection = defineCollection({
+    type: 'content',
+    schema: z.object({
+        name: z.string(),
+        datePublished: z.date(),
+    })
+});
+
 export const collections = {
     'composition': compositionCollection,
     'performance': performanceCollection,
     'project': projectCollection,
-    'scholarly': scholarlyCollection
+    'scholarly': scholarlyCollection,
+    'mythoughts': myThoughtsCollection
 }
