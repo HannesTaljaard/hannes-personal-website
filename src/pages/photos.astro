@@ -1,0 +1,78 @@
+---
+import { NAME } from "../constants";
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import sectionPicture from '../images/section-picture.jpg';
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+
+const title = 'Photos';
+const description = 'Photos';
+---
+
+<Layout title = {title + ' | ' + NAME}, description={description} current="photos">
+    <div class="container max-w-[1120px] flex flex-col items-start mx-auto p-4">
+        <Image src={sectionPicture} alt="Section Picture" />
+
+        <h1 class="text-5xl font-bold font-sans mt-8 mb-8">Photos in High-Resolution</h1>
+
+        <!-- <div id="lightgallery">
+            <a href="images/main-picture.jpeg">
+                <img alt=".." src="images/main-picture.jpeg" />
+            </a>
+            <a href="images/main-picture.jpeg">
+                <img alt=".." src="images/main-picture.jpeg" />
+            </a>
+        </div> -->
+
+        <div id="my-gallery">
+            <a
+              href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"
+              data-pswp-width="1875"
+              data-pswp-height="2500"
+              target="_blank"
+            >
+              <img
+                src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
+              data-pswp-width="1669"
+              data-pswp-height="2500"
+              target="_blank"
+            >
+              <img
+                src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+              data-pswp-width="2500"
+              data-pswp-height="1666"
+              target="_blank"
+            >
+              <img
+                src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+    </div>
+</Layout>
+
+<script>
+    import PhotoSwipeLightbox from 'photoswipe/lightbox';
+    import 'photoswipe/style.css';
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '#my-gallery',
+        children: 'a',
+        pswpModule: () => import('photoswipe')
+    });
+
+    lightbox.init();
+</script>
