@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_NAVIGATION } from "../constants";
+import { Image } from 'astro:assets';
+import sectionPicture from '../images/section-picture.jpg';
+import { Icon } from 'astro-icon/components';
+
+const title = 'Recordings';
+const description = 'Recordings';
+---
+
+<Layout title={title}, description={description}, current="recordings">
+    <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
+        <Image src={sectionPicture} alt="Section Picture" />
+
+        <h1 class="text-5xl font-bold mt-10 mb-8">Recordings</h1>
+
+        <div class="grid grid-cols-3 gap-4">
+            <a class="group relative" href="">
+                <div class="absolute inset-0 opacity-0 px-4 py-6 bg-black text-white group-hover:opacity-75 transition-opacity duration-300 ease-in-out">
+                    <div class="text-sm tracking-widest">2012</div>
+                    <div class="font-semibold text-xl mb-1">Recording Title</div>
+                    <div class="font-serif text-xs mb-4">Publisher</div>
+                    <div class="font-serif">5 Tracks</div>
+                </div>
+                <img class="aspect-square object-cover" src="/images/cover-1.png" alt="c1">
+            </a>
+            <a href="">
+                <img class="aspect-square object-cover" src="/images/cover-2.png" alt="c2">
+            </a>
+            <a href="">
+                <img class="aspect-square object-cover" src="/images/cover-3.png" alt="c3">
+            </a>
+            <a href="">
+                <img class="aspect-square object-cover" src="/images/cover-1.png" alt="c1">
+            </a>
+            <a href="">
+                <img class="aspect-square object-cover" src="/images/cover-2.png" alt="c2">
+            </a>
+            <a href="">
+                <img class="aspect-square object-cover" src="/images/cover-3.png" alt="c3">
+            </a>
+            
+        </div>
+
+    </div>
+</Layout>
