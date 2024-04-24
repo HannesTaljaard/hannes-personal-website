@@ -29,9 +29,9 @@ const description = 'My Thoughts';
                 <div class="font-serif py-6 first:pt-0 last:pb-0">
                     <div class="text-xl font-medium mb-6">{article.data.name}</div>
                     <p class="line-clamp-3 text-gray-500 mb-6">{article.body}</p>
-                    <a href={'/my-thoughts/' + article.slug} class="font-sans flex items-center space-x-2 text-blue-800 hover:underline underline-offset-8">
+                    <a href={'/my-thoughts/' + article.slug} class="group font-sans flex items-center w-fit space-x-2 text-blue-800 hover:underline underline-offset-8">
                         <span>Read More</span>
-                        <Icon name="prime--arrow-right" />
+                        <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
                     </a>  
                 </div>
                 

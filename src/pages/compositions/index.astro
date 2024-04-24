@@ -49,11 +49,10 @@ const description = 'Compositions';
 
         <div class="flex flex-col space-y-4 mb-16">
             {orchestralCompositions.map(composition => (
-                // <CompositionCard composition={composition} />
                 <div class="font-serif">
-                    <a href={'/compositions/' + composition.slug} class="text-xl font-semibold mb-2 flex items-center space-x-2 hover:underline underline-offset-8">
+                    <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
                         <span>{composition.data.title} ({composition.data.year})</span>
-                        <Icon name="prime--arrow-right" />
+                        <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
                     </a>
                     <span class="italic text-lg">{composition.data.subtitle}</span>
                 </div>
@@ -65,9 +64,9 @@ const description = 'Compositions';
         <div class="flex flex-col space-y-4 mb-16">
             {soloCompositions.map(composition => (
                 <div class="font-serif">
-                    <a href={'/compositions/' + composition.slug} class="text-xl font-semibold mb-2 flex items-center space-x-2 hover:underline underline-offset-8">
+                    <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
                         <span>{composition.data.title} ({composition.data.year})</span>
-                        <Icon name="prime--arrow-right" />
+                        <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
                     </a>
                     <span class="italic text-lg">{composition.data.subtitle}</span>
                 </div>
@@ -79,9 +78,9 @@ const description = 'Compositions';
         <div class="flex flex-col space-y-4 mb-16">
             {pianoCompositions.map(composition => (
                 <div class="font-serif">
-                    <a href={'/compositions/' + composition.slug} class="text-xl font-semibold mb-2 flex items-center space-x-2 hover:underline underline-offset-8">
+                    <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
                         <span>{composition.data.title} ({composition.data.year})</span>
-                        <Icon name="prime--arrow-right" />
+                        <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
                     </a>
                     <span class="italic text-lg">{composition.data.subtitle}</span>
                 </div>

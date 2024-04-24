@@ -18,9 +18,9 @@ const description = 'Information';
 
         <div class="font-serif text-xl font-medium flex flex-col space-y-2 mb-20">
             {SITE_NAVIGATION[5].submenu?.map(submenuentry => (
-                <a href={submenuentry.href} class="flex items-center space-x-2 hover:underline underline-offset-8">
+                <a href={submenuentry.href} class="group flex items-center space-x-2 hover:underline underline-offset-8">
                     <span class="capitalize">{submenuentry.name}</span>
-                    <Icon name="prime--arrow-right" />
+                    <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
                 </a>
             ))}
         </div>
