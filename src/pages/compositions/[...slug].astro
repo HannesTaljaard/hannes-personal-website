@@ -17,6 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+const { Content } = await entry.render();
 
 // SSR (Server Site Rendered) Aproach
 // import { getEntry } from 'astro:content';
@@ -42,6 +43,8 @@ const { entry } = Astro.props;
         <h1 class="text-5xl font-bold font-sans mt-8 mb-2">{entry.data.title} <span class="font-normal">({entry.data.year})</span></h1>
         <span class="font-serif text-xl mb-6">{entry.data.subtitle}</span>
         <a type="button" href={entry.data.scoreURL} class="w-60 text-center text-white bg-blue-800 hover:bg-blue-950 focus:ring-4 focus:ring-blue-400 font-medium rounded-md text-md px-5 py-2.5 me-2 mb-6 dark:bg-blue-700 dark:hover:bg-blue-800 focus:outline-none dark:focus:ring-blue-950">Download Score</a>
-        <p class="font-serif text-lg">{entry.body}</p>
+        <div class="prose prose-lg max-w-none font-serif prose-headings:text-black prose-p:text-black">
+            <Content/>
+        </div>
     </div>
 </Layout>
