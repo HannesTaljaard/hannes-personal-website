@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_NAVIGATION } from "../constants";
+import { Image } from 'astro:assets';
+import sectionPicture from '../images/section-picture.jpg';
+import { Icon } from 'astro-icon/components';
+
+const title = 'Contact';
+const description = 'Contact';
+---
+
+<Layout title={title}, description={description}, current="contact">
+    <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
+        <Image src={sectionPicture} alt="Section Picture" />
+
+        <h1 class="text-5xl font-bold mt-10 mb-6">Contact</h1>
+
+        <form class="max-w-xl mb-20">
+            <div class="mb-5">
+                <label for="full-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full Name</label>
+                <input type="text" id="full-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Johannes Brahms" required />
+              </div>
+            <div class="mb-5">
+              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Address</label>
+              <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="example@gmail.com" required />
+            </div>
+            <div class="mb-5">
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Message</label>
+                <textarea id="message" rows="8" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Message"></textarea>
+            </div>
+           <div class="flex items-start mb-5">
+              <div class="flex items-center h-5">
+                <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+              </div>
+              <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">TODO - terms?</label>
+            </div>
+            <button type="submit" class="text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send Message</button>
+          </form>
+
+    </div>
+</Layout>
