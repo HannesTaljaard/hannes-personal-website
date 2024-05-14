@@ -47,7 +47,7 @@ const description = 'Projects';
     <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
         <Image src={sectionPicture} alt="Section Picture" />
 
-        <h1 class="text-5xl font-bold mt-10 mb-8">Projects</h1>
+        <h1 class="text-3xl lg:text-5xl font-bold mt-10 mb-8">Projects</h1>
 
         <ul class="flex flex-row flex-nowrap overflow-x-auto space-x-4 mb-8">
             {years.map(year => (
@@ -62,11 +62,11 @@ const description = 'Projects';
 
         {years.map(year => (
             <h2 id={'year-' + year} class="text-2xl font-bold mb-6 capitalize">{year}</h2>
-            <div class="flex flex-col  divide-y mb-20">
+            <div class="flex flex-col divide-y mb-20">
                 {projectsPerYear.get(year)!.map(project => (
                 
-                <div class="flex flex-row space-x-6 py-6 first:pt-0 last:pb-0">
-                    <img src="/images/main-picture.jpeg" alt="pic" class="max-w-md">
+                <div class="flex flex-col space-y-6 py-6 first:pt-0 last:pb-0 lg:flex-row lg:space-x-6">
+                    <img src={project.data.imgURL} alt="pic" class="lg:max-w-md">
                     <div class="font-serif">
                         <div class="text-xl font-medium mb-2">{project.data.title}</div>
                         <div class="text-gray-500 text-sm mb-4"><span>{formatDate(project.data.startDate)}</span> - <span>{project.data.endDate ? formatDate(project.data.endDate) : 'Ongoing'}</span></div>

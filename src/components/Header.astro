@@ -5,41 +5,41 @@ const { current = 'home' } = Astro.props;
 const navigationEntries = SITE_NAVIGATION;
 ---
 
-<header class="header">
+<header class="header sticky top-0">
     <nav class="bg-white dark:bg-gray-900 dark:border-gray-700">
-        <div class="max-w-[1120px] flex flex-wrap items-center justify-between mx-auto p-4 sm:px-4 sm:py-6">
+        <div class="max-w-[1120px] flex flex-wrap items-center justify-between mx-auto px-4 py-3 sm:p-4 sm:px-4 sm:py-6">
           <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-              <span class="self-center text-2xl uppercase font-medium tracking-widest whitespace-nowrap hover:text-neutral-600 dark:text-white">{NAME}</span>
+              <span class="self-center text-xl sm:text-2xl uppercase font-medium tracking-widest whitespace-nowrap hover:text-neutral-600 dark:text-white">{NAME}</span>
           </a>
 
           <!-- mobile menu button -->
-          <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+          <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-md lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
               <span class="sr-only">Open main menu</span>
               <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
               </svg>
           </button>
-          <div id="navbar-dropdown" class="hidden w-full md:block md:w-auto">
-            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <div id="navbar-dropdown" class="hidden w-full lg:block lg:w-auto">
+            <ul class="flex flex-col font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-md bg-gray-50 lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700">
               {navigationEntries.map(navEntry => ( 
                 <div>
                   {navEntry.hasOwnProperty('submenu') ?
                   
-                  <li class="md:hidden text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                    <div class={current === navEntry.name ? 'flex items-center justify-between mx-auto py-2 px-3 text-white bg-blue-800 rounded md:bg-transparent md:text-blue-800 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent' : 'flex items-center justify-between mx-auto py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}>
+                  <li class="lg:hidden text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent">
+                    <div class={current === navEntry.name ? 'flex items-center justify-between mx-auto py-2 px-3 text-white bg-blue-800 rounded lg:bg-transparent lg:text-blue-800 lg:p-0 lg:dark:text-blue-500 dark:bg-blue-600 lg:dark:bg-transparent' : 'flex items-center justify-between mx-auto py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent'}>
                       <a href={navEntry.href} class="capitalize">{navEntry.name}</a>
-                      <button id="dropdownNavbarLinkMobile" data-collapse-toggle="dropdownNavbarMobile" type="button" class="flex items-center py-2 px-3 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" class={current === navEntry.name ? 'w-2.5 h-2.5 ms-2.5 text-white transition-transform duration-300 ease-in-out' : 'w-2.5 h-2.5 ms-2.5 transition-transform duration-300 ease-in-out'} viewBox="0 0 448 512">
+                      <button id="dropdownNavbarLinkMobile" data-collapse-toggle="dropdownNavbarMobile" type="button" class="flex items-center py-2 px-3 text-gray-900 rounded  lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 lg:w-auto dark:text-white lg:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 lg:dark:hover:bg-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/lgink" fill="currentColor" class={current === navEntry.name ? 'w-2.5 h-2.5 ms-2.5 text-white transition-transform duration-300 ease-in-out' : 'w-2.5 h-2.5 ms-2.5 transition-transform duration-300 ease-in-out'} viewBox="0 0 448 512">
                           <path fill="currentColor" d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"/>
                         </svg>
                       </button>
                     </div>
 
-                    <div id="dropdownNavbarMobile" class="z-10 hidden font-normal divide-y divide-gray-100 rounded-lg dark:bg-gray-700 dark:divide-gray-600">
+                    <div id="dropdownNavbarMobile" class="z-10 hidden font-normal divide-y divide-gray-100 rounded-md dark:bg-gray-700 dark:divide-gray-600">
                       <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                         {navEntry.submenu!.map(submenuEntry => (
                           <li>
-                            <a href={submenuEntry.href} class="block px-4 py-2 capitalize hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{submenuEntry.name}</a>
+                            <a href={submenuEntry.href} class="block px-4 py-2 capitalize hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent">{submenuEntry.name}</a>
                           </li>
                         ))}
 
@@ -47,17 +47,17 @@ const navigationEntries = SITE_NAVIGATION;
                     </div>
                   </li>
 
-                  <li class="max-md:hidden group">
+                  <li class="max-lg:hidden group">
                     <a href={navEntry.href}>
-                      <button id="dropdownNavbarLink" data-popover-target="dropdownNavbar" data-popover-placement="bottom" type="button" class="flex items-center justify-between w-full capitalize py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-                        <span class={current === navEntry.name ? 'block py-2 px-3 capitalize text-white bg-blue-800 rounded md:bg-transparent md:text-blue-800 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent' : 'block py-2 px-3 capitalize text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}>{navEntry.name}</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" class="w-2.5 h-2.5 ms-2.5 transition-transform duration-300 ease-in-out group-hover:-rotate-180" viewBox="0 0 448 512">
+                      <button id="dropdownNavbarLink" data-popover-target="dropdownNavbar" data-popover-placement="bottom" type="button" class="flex items-center justify-between w-full capitalize py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 lg:w-auto dark:text-white lg:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 lg:dark:hover:bg-transparent">
+                        <span class={current === navEntry.name ? 'block py-2 px-3 capitalize text-white bg-blue-800 rounded lg:bg-transparent lg:text-blue-800 lg:p-0 lg:dark:text-blue-500 dark:bg-blue-600 lg:dark:bg-transparent' : 'block py-2 px-3 capitalize text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent'}>{navEntry.name}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/lgink" fill="currentColor" class="w-2.5 h-2.5 ms-2.5 transition-transform duration-300 ease-in-out group-hover:-rotate-180" viewBox="0 0 448 512">
                           <path fill="currentColor" d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"/>
                         </svg>
                       </button>
                     </a>
 
-                      <div id="dropdownNavbar" class="absolute z-10 invisible inline-block font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                      <div id="dropdownNavbar" class="absolute z-10 invisible inline-block font-normal bg-white divide-y divide-gray-100 rounded-md shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                           <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                             {navEntry.submenu!.map(submenuEntry => (
                               <li>
@@ -69,94 +69,12 @@ const navigationEntries = SITE_NAVIGATION;
                   </li>
                   :
                   <li>
-                    <a href={navEntry.href} class={current === navEntry.name ? 'block py-2 px-3 capitalize text-white bg-blue-800 rounded md:bg-transparent md:text-blue-800 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent' : 'block py-2 px-3 capitalize text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'} aria-current="page">{navEntry.name}</a>
+                    <a href={navEntry.href} class={current === navEntry.name ? 'block py-2 px-3 capitalize text-white bg-blue-800 rounded lg:bg-transparent lg:text-blue-800 lg:p-0 lg:dark:text-blue-500 dark:bg-blue-600 lg:dark:bg-transparent' : 'block py-2 px-3 capitalize text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-800 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent'} aria-current="page">{navEntry.name}</a>
                   </li>}
                 </div>
                 
               ))}
-              <!-- <li>
-                <a href="/" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-800 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
-              </li>
-              <li>
-                <a href="/about" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-              </li>
-              <li>
-                <a href="/compositions" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Compositions</a>
-              </li>
-              <li>
-                <a href="/performances" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Performances</a>
-              </li>
-              <li>
-                <a href="/projects" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
-              </li> -->
 
-
-              <!-- mobile version -->
-              <!-- <li class="md:hidden text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                <div class="flex items-center justify-between mx-auto py-2 px-3">
-                  <a href="/information">Information</a>
-                  <button id="dropdownNavbarLinkMobile" data-collapse-toggle="dropdownNavbarMobile" type="button" class="flex items-center py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                    </svg>
-                  </button>
-                </div>
-
-                <div id="dropdownNavbarMobile" class="z-10 hidden font-normal divide-y divide-gray-100 rounded-lg dark:bg-gray-700 dark:divide-gray-600">
-                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Biography</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Photos</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Scholarly</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My Thoughts</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Recordings</a>
-                    </li>
-                  </ul>
-                </div>
-              </li> -->
-
-              <!-- desktop version -->
-              <!-- <li class="max-md:hidden">
-                <a href="/information">
-                  <button id="dropdownNavbarLink" data-popover-target="dropdownNavbar" data-popover-placement="bottom" type="button" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-                  Information
-                  <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                  </svg>
-                  </button>
-                </a>
-
-                  <div id="dropdownNavbar" class="absolute z-10 invisible inline-block font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                      <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                        <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Biography</a>
-                        </li>
-                        <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Photos</a>
-                        </li>
-                        <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Scholarly</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My Thoughts</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Recordings</a>
-                        </li>
-                      </ul>
-                  </div>
-              </li> -->
-              <!-- <li>
-                <a id="contact" href="/contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-              </li> -->
             </ul>
           </div>
         </div>
@@ -168,24 +86,8 @@ const navigationEntries = SITE_NAVIGATION;
     * {
         @apply font-serif;
     }
-/* 
-    #contact {
-      display: inline-block;
-      vertical-align: top;
-      position: relative;
-      text-align: center;
+
+    header {
+      z-index: 1
     }
-
-    #contact::before {
-      @apply bg-blue-800;
-      transform: translateX(-50%);
-      border-radius: 100%;
-      position: absolute;
-      bottom: -8px;
-      height: 6px;
-      content: '';
-      width: 6px;
-      left: 50%;
-    } */
-
 </style>

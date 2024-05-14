@@ -34,7 +34,7 @@ const { Content } = await article.render();
         </a>
 
         <article>
-        <h1 class="text-5xl font-bold font-sans mt-8 mb-2">{article.data.name}</h1>
+        <h1 class="text-3xl lg:text-5xl font-bold font-sans mt-8 mb-2">{article.data.name}</h1>
 
         <div class="mb-20">
             <div class="font-serif text-gray-500 mb-8">
@@ -43,7 +43,7 @@ const { Content } = await article.render();
                 <span>{readingTime(article.body).text}</span>
             </div>
 
-            <div class="prose prose-lg max-w-none font-serif prose-headings:text-black prose-p:text-black">
+            <div class="prose prose-base lg:prose-lg max-w-none font-serif prose-headings:text-black prose-p:text-black">
                 <Content/>
             </div>
             
