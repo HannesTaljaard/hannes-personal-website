@@ -65,7 +65,7 @@ const description = 'Projects';
             <div class="flex flex-col divide-y mb-20">
                 {projectsPerYear.get(year)!.map(project => (
                 
-                <div class="flex flex-col space-y-6 py-6 first:pt-0 last:pb-0 lg:flex-row lg:space-x-6">
+                <div class="flex flex-col space-y-6 py-6 first:pt-0 last:pb-0 lg:flex-row lg:space-x-6 lg:space-y-0">
                     <img src={project.data.imgURL} alt="pic" class="lg:max-w-md">
                     <div class="font-serif">
                         <div class="text-xl font-medium mb-2">{project.data.title}</div>
