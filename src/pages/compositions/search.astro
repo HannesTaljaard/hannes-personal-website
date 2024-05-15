@@ -23,7 +23,7 @@ const description = 'Compositions';
 
             <h2 id="search-readout" class="text-2xl font-bold mt-8 mb-6">Search Results</h2>
     
-            <div id="search-results" class="flex flex-col space-y-4">
+            <div id="search-results" class="flex flex-col space-y-4 mb-16">
     
             </div>
         </section>
@@ -73,9 +73,12 @@ const description = 'Compositions';
             const { title, subtitle, year, slug } = result.item;
             return `
             <div class="font-serif">
-                <a href=/compositions/${slug} class="text-xl font-semibold mb-2 flex items-center space-x-2 hover:underline underline-offset-8">
+                <a href=/compositions/${slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
                     <span>${title} (${year})</span>
-                    <Icon name="ph:arrow-right" widths="20" x-height="20" />
+                    <svg class="group-hover:translate-x-1 transition duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M13 18.75a.74.74 0 0 1-.53-.22a.75.75 0 0 1 0-1.06L17.94 12l-5.47-5.47a.75.75 0 0 1 1.06-1.06l6 6a.75.75 0 0 1 0 1.06l-6 6a.74.74 0 0 1-.53.22" />
+                        <path fill="currentColor" d="M19 12.75H5a.75.75 0 0 1 0-1.5h14a.75.75 0 0 1 0 1.5" />
+                    </svg>
                 </a>
                 <span class="italic text-lg">${subtitle}</span>
             </div>`;
