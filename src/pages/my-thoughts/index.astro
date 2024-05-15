@@ -14,8 +14,8 @@ const myThoughts: CollectionEntry<'my-thoughts'>[] = (await getCollection('my-th
     .sort((a:CollectionEntry<'my-thoughts'>, b:CollectionEntry<'my-thoughts'>) =>
     b.data.datePublished.valueOf() - a.data.datePublished.valueOf());
 
-const title = 'My Thoughts';
-const description = 'My Thoughts';
+const title = 'My Thoughts - ' + NAME;
+const description = "My Thoughts"; // TODO
 ---
 
 <Layout title={title}, description={description} current="information">

@@ -24,9 +24,11 @@ const { article } = Astro.props;
 // https://docs.astro.build/en/tutorials/add-content-collections/#generate-pages-from-a-collection
 const { Content } = await article.render();
 
+const title = article.data.name + ' - ' + NAME;
+const description = article.data.name; // TODO
 ---
 
-<Layout title = {article.data.name + ' | ' + NAME}, current="information">
+<Layout title = {title}, description = {description}, current="information">
     <div class="container max-w-[1120px] flex flex-col items-start mx-auto p-4">
         <a href="/my-thoughts" class="flex items-center space-x-2 text-blue-800 hover:underline underline-offset-8">
             <Icon name="prime--arrow-left" />

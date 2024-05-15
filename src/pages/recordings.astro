@@ -1,12 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { SITE_TITLE, SITE_DESCRIPTION, SITE_NAVIGATION } from "../constants";
+import { NAME } from "../constants";
 import { Image } from 'astro:assets';
 import sectionPicture from '../images/section-picture.jpg';
 import { Icon } from 'astro-icon/components';
 
-const title = 'Recordings';
-const description = 'Recordings';
+const title = 'Recordings - ' + NAME;
+const description = "Recordings"; // TODO
 ---
 
 <Layout title={title}, description={description}, current="information">

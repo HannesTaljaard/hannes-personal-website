@@ -7,6 +7,7 @@ import { Icon } from 'astro-icon/components'
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import SearchForm from '../../components/SearchForm.astro';
+import { NAME } from '../../constants';
 
 const allCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions');
 const orchestralCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
@@ -25,8 +26,8 @@ const fluteCompositions: CollectionEntry<'compositions'>[] = await getCollection
 // An array of available categories - categories enum is defined in 'config.ts'
 const categories = [...new Set(allCompositions.map((composition) => composition.data.category).flat())];
 
-const title = 'Compositions';
-const description = 'Compositions';
+const title = 'Compositions - ' + NAME
+const description = "Compositions" // TODO
 ---
 
 <Layout title={title}, description={description} current="compositions">

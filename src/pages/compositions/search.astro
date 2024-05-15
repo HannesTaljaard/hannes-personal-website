@@ -5,13 +5,15 @@ import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 import sectionPicture from '../../images/section-picture.jpg';
 import { getCollection } from "astro:content";
+import { NAME } from "../../constants";
 
 // const searchQuery: string | null = Astro.url.searchParams.get('search_query');
 
-const description = 'Compositions';
+const title = 'Search Results - ' + NAME;
+const description = "Search Results"; // TODO
 ---
 
-<Layout title ="Search Results", description={description} current="compositions">
+<Layout title ={title}, description={description} current="compositions">
     <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
         <Image src={sectionPicture} alt="Section Picture" />
 

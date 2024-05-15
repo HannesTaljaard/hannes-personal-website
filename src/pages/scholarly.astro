@@ -14,8 +14,8 @@ const allScholarlyEntries: CollectionEntry<'scholarly'>[] = (await getCollection
     .sort((a:CollectionEntry<'scholarly'>, b:CollectionEntry<'scholarly'>) =>
     b.data.yearPublished - a.data.yearPublished);
 
-const title = 'Scholarly';
-const description = 'Scholarly';
+const title = 'Scholarly - ' + NAME;
+const description = "Scholarly"; // TODO
 ---
 
 <Layout title={title}, description={description} current="information">
