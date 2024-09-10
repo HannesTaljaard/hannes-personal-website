@@ -107,3 +107,5 @@ export const FOOTER_SOCIALS = [
         icon: "mdi:linkedin",
     },
 ]
+
+export const COMPOSITION_CATEGORIES_LIST = ['orchestral', 'chamber-music-2-3', 'chamber-music-4', 'choir', 'vocal', 'solo-instrumental'];

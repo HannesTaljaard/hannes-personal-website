@@ -7,24 +7,33 @@ import { Icon } from 'astro-icon/components'
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import SearchForm from '../../components/SearchForm.astro';
-import { NAME } from '../../constants';
+import { COMPOSITION_CATEGORIES_LIST, NAME } from '../../constants';
+import { getPrettyCategoryName } from '../../utils';
 
 const allCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions');
 const orchestralCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
-    return data.category.toLowerCase() === 'orchestra';
+    return data.category.toLowerCase() === 'orchestral';
 });
-const soloCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
-    return data.category.toLowerCase() === 'solo';
+const chamberMusic23Compositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
+    return data.category.toLowerCase() === 'chamber-music-2-3';
 });
-const pianoCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
-    return data.category.toLowerCase() === 'piano';
+const chamberMusic4Compositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
+    return data.category.toLowerCase() === 'chamber-music-4';
 });
-const fluteCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
-    return data.category.toLowerCase() === 'flute';
+const choirCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
+    return data.category.toLowerCase() === 'choir';
+});
+const vocalCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
+    return data.category.toLowerCase() === 'vocal';
+});
+const soloInstrumentalCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
+    return data.category.toLowerCase() === 'solo-instrumental';
 });
 
-// An array of available categories - categories enum is defined in 'config.ts'
-const categories = [...new Set(allCompositions.map((composition) => composition.data.category).flat())];
+// An array of available categories - categories enum is defined in 'config.ts' and has to be the same in constants.ts (which defines the order)
+// const categories = [...new Set(allCompositions.map((composition) => composition.data.category).flat())];
+const categories = COMPOSITION_CATEGORIES_LIST;
+
 
 const title = 'Compositions - ' + NAME
 const description = "Compositions" // TODO
@@ -36,25 +45,38 @@ const description = "Compositions" // TODO
 
         <h1 class="text-3xl lg:text-5xl font-bold mt-10 mb-6">Compositions</h1>
         
+        <div class="flex flex-col gap-4 text-base lg:text-lg font-regular font-serif mb-6">
+            <p>This is not an exhaustive list of all the works that I have composed until now. The list is presented
+                here as a resource for performers who would like to find compositions to perform and information on
+                my compositions. Those works that I suspect are worth the efforts of performers and listeners are
+                included here. Several compositions were on my work list for some time and were then withdrawn.
+                Compositions which are currently on this list, might also be withdrawn in future.
+                (<a href="/compositions" class="text-blue-800 underline underline-offset-8 hover:no-underline">Here</a> you can find
+                more information on this matter.)
+            </p>
+            <p>This list was last updated in August 2024.</p>
+        </div>
+
         <SearchForm />
 
         <ul class="flex flex-row flex-nowrap overflow-x-auto space-x-4 my-8">
             {categories.map(category => (
                 <a href={'#category-' + category}>
                     <li class="flex flex-row flex-nowrap items-center space-x-1 text-gray-400 hover:text-black">
-                        <span class="uppercase text-nowrap">{category}</span>
+                        <span class="uppercase text-nowrap">{getPrettyCategoryName(category)}</span>
                         <Icon name="prime--arrow-down" />
                     </li>
                 </a>
             ))}
         </ul>
 
-        <h2 id="category-orchestra" class="text-2xl font-bold mb-6">Orchestra</h2>
+        <h2 id="category-orchestral" class="text-2xl font-bold mb-6">Orchestral</h2>
 
         <div class="flex flex-col space-y-4 mb-16">
             {orchestralCompositions.map(composition => (
                 <div class="font-serif">
-                    <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
+                    {/* <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8"> */}
+                    <a class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
                         <span>{composition.data.title} ({composition.data.year})</span>
                         <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
                     </a>
@@ -63,12 +85,12 @@ const description = "Compositions" // TODO
             ))}
         </div>
 
-        <h2 id="category-solo" class="text-2xl font-bold mb-6">Solo</h2>
+        <h2 id="category-chamber-music-2-3" class="text-2xl font-bold mb-6">Chamber Music: 2-3 Performers</h2>
 
         <div class="flex flex-col space-y-4 mb-16">
-            {soloCompositions.map(composition => (
+            {chamberMusic23Compositions.map(composition => (
                 <div class="font-serif">
-                    <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
+                    <a class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
                         <span>{composition.data.title} ({composition.data.year})</span>
                         <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
                     </a>
@@ -77,12 +99,12 @@ const description = "Compositions" // TODO
             ))}
         </div>
 
-        <h2 id="category-piano" class="text-2xl font-bold mb-6">Piano</h2>
+        <h2 id="category-chamber-music-4" class="text-2xl font-bold mb-6">Chamber Music: 4 Performers</h2>
 
         <div class="flex flex-col space-y-4 mb-16">
-            {pianoCompositions.map(composition => (
+            {chamberMusic4Compositions.map(composition => (
                 <div class="font-serif">
-                    <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
+                    <a class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
                         <span>{composition.data.title} ({composition.data.year})</span>
                         <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
                     </a>
@@ -91,12 +113,40 @@ const description = "Compositions" // TODO
             ))}
         </div>
 
-        <h2 id="category-flute" class="text-2xl font-bold mb-6">Flute</h2>
+        <h2 id="category-choir" class="text-2xl font-bold mb-6">Choir</h2>
 
         <div class="flex flex-col space-y-4 mb-16">
-            {fluteCompositions.map(composition => (
+            {choirCompositions.map(composition => (
                 <div class="font-serif">
-                    <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
+                    <a class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
+                        <span>{composition.data.title} ({composition.data.year})</span>
+                        <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
+                    </a>
+                    <span class="italic text-lg">{composition.data.subtitle}</span>
+                </div>
+            ))}
+        </div>
+
+        <h2 id="category-vocal" class="text-2xl font-bold mb-6">Vocal</h2>
+
+        <div class="flex flex-col space-y-4 mb-16">
+            {vocalCompositions.map(composition => (
+                <div class="font-serif">
+                    <a class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
+                        <span>{composition.data.title} ({composition.data.year})</span>
+                        <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
+                    </a>
+                    <span class="italic text-lg">{composition.data.subtitle}</span>
+                </div>
+            ))}
+        </div>
+
+        <h2 id="category-solo-instrumental" class="text-2xl font-bold mb-6">Solo Instrumental</h2>
+
+        <div class="flex flex-col space-y-4 mb-16">
+            {soloInstrumentalCompositions.map(composition => (
+                <div class="font-serif">
+                    <a class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
                         <span>{composition.data.title} ({composition.data.year})</span>
                         <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
                     </a>
