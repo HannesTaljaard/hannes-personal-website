@@ -28,6 +28,7 @@ const projectCollection = defineCollection({
         title: z.string(),
         startDate: z.date(),
         endDate: z.date().optional(),
+        isLongTerm: z.boolean(),
         imgURL: z.string().url()
     })
 });

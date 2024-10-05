@@ -17,7 +17,12 @@ const allProjects: CollectionEntry<'projects'>[] = (await getCollection('project
         } else {
             return a.data.endDate !== null ? 1 : -1;
         }
-    });
+});
+
+// All project with boolean 'isLongTerm' set to true
+const longTermProjects: CollectionEntry<'projects'>[] = (await getCollection('projects', ({data}) => {
+    return data.isLongTerm === true;
+}));
 
 const projectsPerYear = new Map<string, CollectionEntry<'performances'>[]>();
 
@@ -37,7 +42,10 @@ allProjects.map(project => {
 });
 
 // An array of available years i.e. years in which at least one project *ended*
-const years = Array.from(projectsPerYear.keys());
+const years = Array.from(projectsPerYear.keys()); // TODO handle 'Long-Term'
+// years.unshift('long-term');
+console.log(years);
+
 
 const title = 'Projects - ' + NAME;
 const description = "Projects"; // TODO
@@ -59,6 +67,21 @@ const description = "Projects"; // TODO
                 </a>
             ))}
         </ul>
+
+        <h2 id={'long-term'} class="text-2xl font-bold mb-6 capitalize">Long-Term</h2>
+        <div class="flex flex-col divide-y mb-20">
+            {longTermProjects.map(project => (
+            
+            <div class="flex flex-col space-y-6 py-6 first:pt-0 last:pb-0 lg:flex-row lg:space-x-6 lg:space-y-0">
+                <img src={project.data.imgURL} alt="pic" class="lg:max-w-md">
+                <div class="font-serif">
+                    <div class="text-xl font-medium mb-2">{project.data.title}</div>
+                    <div class="text-gray-500 text-sm mb-4"><span>{formatDate(project.data.startDate)}</span> - <span>{project.data.endDate ? formatDate(project.data.endDate) : 'Ongoing'}</span></div>
+                    <p>{project.body}</p>
+                </div>
+            </div>
+            ))}
+        </div>
 
         {years.map(year => (
             <h2 id={'year-' + year} class="text-2xl font-bold mb-6 capitalize">{year}</h2>

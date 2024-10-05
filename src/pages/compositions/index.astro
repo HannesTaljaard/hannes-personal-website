@@ -11,24 +11,35 @@ import { COMPOSITION_CATEGORIES_LIST, NAME } from '../../constants';
 import { getPrettyCategoryName } from '../../utils';
 
 const allCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions');
-const orchestralCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
+const orchestralCompositions: CollectionEntry<'compositions'>[] = (await getCollection('compositions', ({data}) => {
     return data.category.toLowerCase() === 'orchestral';
-});
-const chamberMusic23Compositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
+})).sort((a:CollectionEntry<'compositions'>, b:CollectionEntry<'compositions'>) =>
+b.data.year - a.data.year);
+
+const chamberMusic23Compositions: CollectionEntry<'compositions'>[] = (await getCollection('compositions', ({data}) => {
     return data.category.toLowerCase() === 'chamber-music-2-3';
-});
-const chamberMusic4Compositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
+})).sort((a:CollectionEntry<'compositions'>, b:CollectionEntry<'compositions'>) =>
+b.data.year - a.data.year);
+
+const chamberMusic4Compositions: CollectionEntry<'compositions'>[] = (await getCollection('compositions', ({data}) => {
     return data.category.toLowerCase() === 'chamber-music-4';
-});
-const choirCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
+})).sort((a:CollectionEntry<'compositions'>, b:CollectionEntry<'compositions'>) =>
+b.data.year - a.data.year);
+
+const choirCompositions: CollectionEntry<'compositions'>[] = (await getCollection('compositions', ({data}) => {
     return data.category.toLowerCase() === 'choir';
-});
-const vocalCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
+})).sort((a:CollectionEntry<'compositions'>, b:CollectionEntry<'compositions'>) =>
+b.data.year - a.data.year);
+
+const vocalCompositions: CollectionEntry<'compositions'>[] = (await getCollection('compositions', ({data}) => {
     return data.category.toLowerCase() === 'vocal';
-});
-const soloInstrumentalCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions', ({data}) => {
+})).sort((a:CollectionEntry<'compositions'>, b:CollectionEntry<'compositions'>) =>
+b.data.year - a.data.year);
+
+const soloInstrumentalCompositions: CollectionEntry<'compositions'>[] = (await getCollection('compositions', ({data}) => {
     return data.category.toLowerCase() === 'solo-instrumental';
-});
+})).sort((a:CollectionEntry<'compositions'>, b:CollectionEntry<'compositions'>) =>
+b.data.year - a.data.year);
 
 // An array of available categories - categories enum is defined in 'config.ts' and has to be the same in constants.ts (which defines the order)
 // const categories = [...new Set(allCompositions.map((composition) => composition.data.category).flat())];
