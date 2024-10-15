@@ -47,10 +47,8 @@ shortTermProjects.map(project => {
 });
 
 // An array of available years i.e. years in which at least one project *ended*
-const years = Array.from(projectsPerYear.keys()); // TODO handle 'Long-Term' Proble: projectsPerYear has no entry 'long-term' therefore throws undefined error
-// years.unshift('long-term'); 
-console.log(years);
-
+const years = Array.from(projectsPerYear.keys());
+// console.log(years);
 
 const title = 'Projects - ' + NAME;
 const description = "Projects"; // TODO
