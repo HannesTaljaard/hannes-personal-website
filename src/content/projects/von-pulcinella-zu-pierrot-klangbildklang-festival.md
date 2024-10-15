@@ -3,7 +3,7 @@ title: 'Von Pulcinella zu Pierrot (KlangBildKlang-Festival)'
 startDate: 2024-04-01
 endDate: 2024-05-01
 isLongTerm: false
-imgURL: '/images/main-picture.jpeg'
+imgURL: '/images/Von-Pulcinella.webp'
 ---
 Performance: Wednesday 22 May 2024, Haydn-Saal, Universität für Musik und darstellende
 Kunst Wien

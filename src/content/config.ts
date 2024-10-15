@@ -14,7 +14,7 @@ const compositionCollection = defineCollection({
 const performanceCollection = defineCollection({
     type: 'content',
     schema: z.object({
-        kind: z.enum(['composition', 'performance']),
+        kind: z.enum(['composition', 'performance', 'composition-performance']),
         title: z.string(),
         performer: z.array(z.string()),
         performanceDate: z.date(),

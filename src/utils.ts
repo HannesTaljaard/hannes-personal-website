@@ -4,6 +4,12 @@ function formatDate(date: Date): string {
     return new Date(date).toLocaleDateString(undefined, options);
 }
 
+function formatDateNoDay(date: Date): string {
+    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long' };
+
+    return new Date(date).toLocaleDateString(undefined, options);
+}
+
 // Returns a pretty/readable category string. (Converted from a category URL from config.ts to a pretty string)
 function getPrettyCategoryName(categoryURL: string): string {
     var prettyCategoryName = 'null';
@@ -34,4 +40,4 @@ function getPrettyCategoryName(categoryURL: string): string {
     return prettyCategoryName;
 }
 
-export { formatDate, getPrettyCategoryName }
+export { formatDate, formatDateNoDay, getPrettyCategoryName }

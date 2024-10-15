@@ -1,9 +1,9 @@
 ---
-title: 'Movement as musical Sense-Making (pas: trans_form)'
+title: 'Movement as musical Meaning-Making (pas: trans_form)'
 startDate: 2024-09-01
-endDate: 
+endDate: 2024-11-01
 isLongTerm: false
-imgURL: '/images/main-picture.jpeg'
+imgURL: '/images/MoMuMeMa.webp'
 ---
 Performance: November 2024 (Festwoche Musikpädagogik, mdw)
 Students from Institute 13 of the mdw will present an improvisation that starts from certain

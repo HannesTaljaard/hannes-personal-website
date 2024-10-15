@@ -2,11 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from "../constants";
 import { Image } from 'astro:assets';
-import mainPicture from '../images/main-picture.jpeg';
+import mainCollage from '../images/Hannes-Collage-Home.webp';
 ---
 
 <Layout title={SITE_TITLE}, description={SITE_DESCRIPTION}>
 	<div class="max-w-[1120px] flex flex-wrap items-center mx-auto px-4 pb-4">
-		<Image src={mainPicture} alt="Main Picture" />
+		<Image src={mainCollage} alt="Main Picture" />
 	</div>
 </Layout>

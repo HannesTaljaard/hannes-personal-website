@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { NAME } from "../constants";
 import { Image } from 'astro:assets';
-import sectionPicture from '../images/section-picture.jpg';
+import ribbonAbout from '../images/Ribbon-1-About.webp';
 import { Icon } from 'astro-icon/components'
 
 const title = 'About - ' + NAME;
@@ -11,7 +11,7 @@ const description = ""; // TODO
 
 <Layout title={title}, description={description}, current="about">
     <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
-        <Image src={sectionPicture} alt="Section Picture" />
+        <Image src={ribbonAbout} alt="Ribbon About" />
 
         <div class="mb-20">
             <h1 class="text-3xl lg:text-5xl font-bold mt-10 mb-6">About</h1>

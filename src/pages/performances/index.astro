@@ -2,7 +2,7 @@
 import { NAME } from "../../constants";
 import Layout from "../../layouts/Layout.astro";
 import { Image } from 'astro:assets';
-import sectionPicture from '../../images/section-picture.jpg';
+import ribbonPerformances from '../../images/Ribbon-3-Performances.webp';
 // Icons managed with astro-icon + icon package (@iconify-json/ph)
 import { Icon } from 'astro-icon/components';
 import type { CollectionEntry } from "astro:content";
@@ -35,7 +35,7 @@ const description = "Performances"; // TODO
 
 <Layout title={title}, description={description} current="performances">
     <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
-        <Image src={sectionPicture} alt="Section Picture" />
+        <Image src={ribbonPerformances} alt="Ribbon Performances" />
 
         <h1 class="text-3xl lg:text-5xl font-bold mt-10 mb-8">Performances</h1>
 
@@ -56,7 +56,7 @@ const description = "Performances"; // TODO
             <div class="flex flex-col space-y-12 mb-20">
                 {performancesPerYear.get(year)!.map(performance => (
                 <div class="font-serif">
-                    <div class="text-sm font-sans text-gray-500 mb-2 tracking-widest">{'MY ' + performance.data.kind.toUpperCase()}</div>
+                    <div class="text-sm font-sans text-gray-500 mb-2 tracking-widest">{performance.data.kind === 'composition-performance' ? 'MY COMPOSITION & MY PERFORMANCE' : 'MY ' + performance.data.kind.toUpperCase()}</div>
                     <div class="text-xl font-medium mb-2">{performance.data.title}</div>
                     <div class="mb-4">
                         {performance.data.performer.map((performer: string) => (

@@ -2,12 +2,12 @@
 import { NAME } from "../../constants";
 import Layout from "../../layouts/Layout.astro";
 import { Image } from 'astro:assets';
-import sectionPicture from '../../images/section-picture.jpg';
+import ribbonProjects from '../../images/Ribbon-4-Projects.webp';
 // Icons managed with astro-icon + icon package (@iconify-json/ph)
 import { Icon } from 'astro-icon/components';
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
-import { formatDate } from "../../utils";
+import { formatDateNoDay } from "../../utils";
 
 // Sorted by Date descending
 const allProjects: CollectionEntry<'projects'>[] = (await getCollection('projects'))
@@ -24,16 +24,16 @@ const longTermProjects: CollectionEntry<'projects'>[] = (await getCollection('pr
     return data.isLongTerm === true;
 }));
 
-const projectsPerYear = new Map<string, CollectionEntry<'performances'>[]>();
+const projectsPerYear = new Map<string, CollectionEntry<'projects'>[]>();
 
 allProjects.map(project => {
     if (project.data.endDate === null && projectsPerYear.has('current')) {
-        let projectsPerOneYear: CollectionEntry<'performances'>[] = projectsPerYear.get('current')!;
+        let projectsPerOneYear: CollectionEntry<'projects'>[] = projectsPerYear.get('current')!;
         projectsPerOneYear.push(project);
         projectsPerYear.set('current', projectsPerOneYear);
         return;
     } else if (project.data.endDate !== null && projectsPerYear.has(project.data.endDate.getFullYear())) {
-        let projectsPerOneYear: CollectionEntry<'performances'>[] = projectsPerYear.get(project.data.endDate.getFullYear())!;
+        let projectsPerOneYear: CollectionEntry<'projects'>[] = projectsPerYear.get(project.data.endDate.getFullYear())!;
         projectsPerOneYear.push(project);
         projectsPerYear.set(project.data.endDate.getFullYear(), projectsPerOneYear);
         return;
@@ -53,7 +53,7 @@ const description = "Projects"; // TODO
 
 <Layout title={title}, description={description} current="projects">
     <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
-        <Image src={sectionPicture} alt="Section Picture" />
+        <Image src={ribbonProjects} alt="Ribbon Projects" />
 
         <h1 class="text-3xl lg:text-5xl font-bold mt-10 mb-8">Projects</h1>
 
@@ -76,7 +76,7 @@ const description = "Projects"; // TODO
                 <img src={project.data.imgURL} alt="pic" class="lg:max-w-md">
                 <div class="font-serif">
                     <div class="text-xl font-medium mb-2">{project.data.title}</div>
-                    <div class="text-gray-500 text-sm mb-4"><span>{formatDate(project.data.startDate)}</span> - <span>{project.data.endDate ? formatDate(project.data.endDate) : 'Ongoing'}</span></div>
+                    <div class="text-gray-500 text-sm mb-4"><span>{formatDateNoDay(project.data.startDate)}</span> - <span>{project.data.endDate ? formatDateNoDay(project.data.endDate) : 'Ongoing'}</span></div>
                     <p>{project.body}</p>
                 </div>
             </div>
@@ -92,7 +92,7 @@ const description = "Projects"; // TODO
                     <img src={project.data.imgURL} alt="pic" class="lg:max-w-md">
                     <div class="font-serif">
                         <div class="text-xl font-medium mb-2">{project.data.title}</div>
-                        <div class="text-gray-500 text-sm mb-4"><span>{formatDate(project.data.startDate)}</span> - <span>{project.data.endDate ? formatDate(project.data.endDate) : 'Ongoing'}</span></div>
+                        <div class="text-gray-500 text-sm mb-4"><span>{formatDateNoDay(project.data.startDate)}</span> - <span>{project.data.endDate ? formatDateNoDay(project.data.endDate) : 'Ongoing'}</span></div>
                         <p>{project.body}</p>
                     </div>
                 </div>
