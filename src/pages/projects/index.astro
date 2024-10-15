@@ -9,24 +9,29 @@ import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import { formatDateNoDay } from "../../utils";
 
+// All project with boolean 'isLongTerm' set to true
+const longTermProjects: CollectionEntry<'projects'>[] = (await getCollection('projects', ({data}) => {
+    return data.isLongTerm === true;
+}));
+
+// All project with boolean 'isLongTerm' set to false
+let shortTermProjects: CollectionEntry<'projects'>[] = (await getCollection('projects', ({data}) => {
+    return data.isLongTerm === false;
+}));
+
 // Sorted by Date descending
-const allProjects: CollectionEntry<'projects'>[] = (await getCollection('projects'))
+shortTermProjects = shortTermProjects
     .sort((a:CollectionEntry<'projects'>, b:CollectionEntry<'projects'>) => {
-        if(a.data.endDate !== null && b.data.endDate !== null ) {
+        if(a.data.endDate !== null && b.data.endDate !== null) {
             return a.data.endDate < b.data.endDate ? 1 : -1;
         } else {
             return a.data.endDate !== null ? 1 : -1;
         }
 });
 
-// All project with boolean 'isLongTerm' set to true
-const longTermProjects: CollectionEntry<'projects'>[] = (await getCollection('projects', ({data}) => {
-    return data.isLongTerm === true;
-}));
-
 const projectsPerYear = new Map<string, CollectionEntry<'projects'>[]>();
 
-allProjects.map(project => {
+shortTermProjects.map(project => {
     if (project.data.endDate === null && projectsPerYear.has('current')) {
         let projectsPerOneYear: CollectionEntry<'projects'>[] = projectsPerYear.get('current')!;
         projectsPerOneYear.push(project);
@@ -42,8 +47,8 @@ allProjects.map(project => {
 });
 
 // An array of available years i.e. years in which at least one project *ended*
-const years = Array.from(projectsPerYear.keys()); // TODO handle 'Long-Term'
-// years.unshift('long-term');
+const years = Array.from(projectsPerYear.keys()); // TODO handle 'Long-Term' Proble: projectsPerYear has no entry 'long-term' therefore throws undefined error
+// years.unshift('long-term'); 
 console.log(years);
 
 
@@ -58,6 +63,13 @@ const description = "Projects"; // TODO
         <h1 class="text-3xl lg:text-5xl font-bold mt-10 mb-8">Projects</h1>
 
         <ul class="flex flex-row flex-nowrap overflow-x-auto space-x-4 mb-8">
+            <!-- Seperate Long-Term handling -->
+            <a href={'#long-term'}>
+                <li class="flex flex-row flex-nowrap items-center space-x-1 text-gray-400 hover:text-black">
+                    <span class="uppercase text-nowrap">Long-Term</span>
+                    <Icon name="prime--arrow-down" />
+                </li>
+            </a>
             {years.map(year => (
                 <a href={'#year-' + year}>
                     <li class="flex flex-row flex-nowrap items-center space-x-1 text-gray-400 hover:text-black">
@@ -76,7 +88,7 @@ const description = "Projects"; // TODO
                 <img src={project.data.imgURL} alt="pic" class="lg:max-w-md">
                 <div class="font-serif">
                     <div class="text-xl font-medium mb-2">{project.data.title}</div>
-                    <div class="text-gray-500 text-sm mb-4"><span>{formatDateNoDay(project.data.startDate)}</span> - <span>{project.data.endDate ? formatDateNoDay(project.data.endDate) : 'Ongoing'}</span></div>
+                    {/* <div class="text-gray-500 text-sm mb-4"><span>{formatDateNoDay(project.data.startDate)}</span> - <span>{project.data.endDate ? formatDateNoDay(project.data.endDate) : 'Ongoing'}</span></div> */}
                     <p>{project.body}</p>
                 </div>
             </div>
@@ -96,7 +108,7 @@ const description = "Projects"; // TODO
                         <p>{project.body}</p>
                     </div>
                 </div>
-            ))}
+                ))}
             </div>
         ))}
 

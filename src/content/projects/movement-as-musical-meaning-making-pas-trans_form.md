@@ -1,7 +1,7 @@
 ---
 title: 'Movement as musical Meaning-Making (pas: trans_form)'
 startDate: 2024-09-01
-endDate: 2024-11-01
+endDate: 
 isLongTerm: false
 imgURL: '/images/MoMuMeMa.webp'
 ---
