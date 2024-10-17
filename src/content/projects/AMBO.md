@@ -3,6 +3,7 @@ title: 'AMBO'
 startDate: 2024-07-01
 endDate: 
 isLongTerm: true
+performance: 
 imgURL: '/images/projects/AMBO.webp'
 ---
 Our piano duo specialises in performances that incorporate music and movement

@@ -5,4 +5,4 @@ performer: ['Hannes Taljaard, Movement Improvisation']
 performanceDate: 2024-11-22
 location: 'Mdw | Haydn-Saal, Anton-von-Webern-Platz 1, Vienna'
 ---
-Part of the concert Let Freedom Ring
+Part of the concert *Let Freedom Ring*

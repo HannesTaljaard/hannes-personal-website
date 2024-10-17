@@ -26,6 +26,12 @@ allPerformances.map(performance => {
     performancesPerYear.set(performance.data.performanceDate.getFullYear(), [performance]);
 });
 
+// allPerformances.map(performance => {
+//     const {Content} = performance.render();
+//     console.log(Content);
+// })
+
+
 // An array of available years i.e. years in which at least one performance happened
 const years = Array.from(performancesPerYear.keys());
 
@@ -54,22 +60,27 @@ const description = "Performances"; // TODO
         {years.map(year => (
             <h2 id={'year-' + year} class="text-2xl font-bold mb-6">{year}</h2>
             <div class="flex flex-col space-y-12 mb-20">
-                {performancesPerYear.get(year)!.map(performance => (
-                <div class="font-serif">
-                    <div class="text-sm font-sans text-gray-500 mb-2 tracking-widest">{performance.data.kind === 'composition-performance' ? 'MY COMPOSITION & MY PERFORMANCE' : 'MY ' + performance.data.kind.toUpperCase()}</div>
-                    <div class="text-xl font-medium mb-2">{performance.data.title}</div>
-                    <div class="mb-4">
-                        {performance.data.performer.map((performer: string) => (
-                        <div class="font-medium">{performer.split(",")[0]}<span class=" text-gray-500">, {performer.split(",")[1]}</span></div>
-                        ))}
-                    </div>
-                    <div class="text-gray-500">
-                        <div class="text-sm mb-1">{formatDate(performance.data.performanceDate)}</div>
-                        <div class="text-sm mb-4">{performance.data.location}</div>
-                    </div>
-                    <p>{performance.body}</p>
-                </div>
-            ))}
+                {performancesPerYear.get(year)!.map(async (performance) => {
+                const {Content} = await performance.render()
+                return (
+                    <div class="font-serif">
+                        <div class="text-sm font-sans text-gray-500 mb-2 tracking-widest">{performance.data.kind === 'composition-performance' ? 'MY COMPOSITION & MY PERFORMANCE' : 'MY ' + performance.data.kind.toUpperCase()}</div>
+                        <div class="text-xl font-medium mb-2">{performance.data.title}</div>
+                        <div class="mb-4">
+                            {performance.data.performer.map((performer: string) => (
+                            <div class="font-medium">{performer.split(",")[0]}<span class=" text-gray-500">, {performer.split(",")[1]}</span></div>
+                            ))}
+                        </div>
+                        <div class="text-gray-500">
+                            <div class="text-sm mb-1">{formatDate(performance.data.performanceDate)}</div>
+                            <div class="text-sm mb-4">{performance.data.location}</div>
+                        </div>
+                        <div>
+                            <Content />
+                        </div>
+                    </div>  
+                )
+                })}
             </div>
         ))}
 

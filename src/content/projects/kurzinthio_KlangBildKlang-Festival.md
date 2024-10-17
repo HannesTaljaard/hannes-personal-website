@@ -3,12 +3,11 @@ title: 'Kurzinthio (KlangBildKlang-Festival)'
 startDate: 2023-10-01
 endDate: 2024-05-01
 isLongTerm: false
+performance: 'Wednesday 15 May, Brick-15, Vienna'
 imgURL: '/images/projects/Kurzinthio.webp'
 ---
-Performance: Wednesday 15 May, Brick-15, Vienna
 I worked as choreographer for the first piece on the programme (Reflejos Distantes by Karola
-Obermüller) and as movement artist in three more performances.
-
+Obermüller) and as movement artist in three more performances.<br><br>
 The transdisciplinary project KORZINTHIO combined music and movement to create a
 multisensory experience for the participating artists (almost twenty students and three
 lecturers at the University of Music and performing Arts Vienna) and the audience. The

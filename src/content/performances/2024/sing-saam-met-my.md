@@ -5,4 +5,4 @@ performer: ['Hannes Taljaard, Voice & Movement', 'Aleksandr Okhotnikov, Piano & 
 performanceDate: 2024-12-19
 location: 'Mdw | Haydn-Saal, Anton-von-Webern-Platz 1, Vienna'
 ---
-Part of the concert Moving Voices
+Part of the concert *Moving Voices*

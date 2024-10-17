@@ -8,6 +8,7 @@ import { Icon } from 'astro-icon/components';
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import { formatDateNoDay } from "../../utils";
+import Contact from "../contact.astro";
 
 // All project with boolean 'isLongTerm' set to true
 const longTermProjects: CollectionEntry<'projects'>[] = (await getCollection('projects', ({data}) => {
@@ -78,35 +79,46 @@ const description = "Projects"; // TODO
             ))}
         </ul>
 
+        <!-- Seperate Long-Term handling -->
         <h2 id={'long-term'} class="text-2xl font-bold mb-6 capitalize">Long-Term</h2>
         <div class="flex flex-col divide-y mb-20">
-            {longTermProjects.map(project => (
-            
-            <div class="flex flex-col space-y-6 py-6 first:pt-0 last:pb-0 lg:flex-row lg:space-x-6 lg:space-y-0">
-                <img src={project.data.imgURL} alt="pic" class="lg:max-w-md">
-                <div class="font-serif">
-                    <div class="text-xl font-medium mb-2">{project.data.title}</div>
-                    {/* <div class="text-gray-500 text-sm mb-4"><span>{formatDateNoDay(project.data.startDate)}</span> - <span>{project.data.endDate ? formatDateNoDay(project.data.endDate) : 'Ongoing'}</span></div> */}
-                    <p>{project.body}</p>
+            {longTermProjects.map(async (project) => {
+            const {Content} = await project.render()
+            return (
+                <div class="flex flex-col space-y-6 py-6 first:pt-0 last:pb-0 lg:flex-row lg:space-x-6 lg:space-y-0">
+                    <img src={project.data.imgURL} alt="pic" class="lg:max-w-md">
+                    <div class="font-serif">
+                        <div class="text-xl font-medium mb-2">{project.data.title}</div>
+                        <div>
+                            <Content />
+                        </div>
+                    </div>
                 </div>
-            </div>
-            ))}
+            )
+            })}
         </div>
 
         {years.map(year => (
             <h2 id={'year-' + year} class="text-2xl font-bold mb-6 capitalize">{year}</h2>
             <div class="flex flex-col divide-y mb-20">
-                {projectsPerYear.get(year)!.map(project => (
-                
-                <div class="flex flex-col space-y-6 py-6 first:pt-0 last:pb-0 lg:flex-row lg:space-x-6 lg:space-y-0">
-                    <img src={project.data.imgURL} alt="pic" class="lg:max-w-md">
-                    <div class="font-serif">
-                        <div class="text-xl font-medium mb-2">{project.data.title}</div>
-                        <div class="text-gray-500 text-sm mb-4"><span>{formatDateNoDay(project.data.startDate)}</span> - <span>{project.data.endDate ? formatDateNoDay(project.data.endDate) : 'Ongoing'}</span></div>
-                        <p>{project.body}</p>
-                    </div>
-                </div>
-                ))}
+                {projectsPerYear.get(year)!.map(async (project) => {
+                const {Content} = await project.render()
+                return (
+                    <div class="flex flex-col space-y-6 py-6 first:pt-0 last:pb-0 lg:flex-row lg:space-x-6 lg:space-y-0">
+                        <img src={project.data.imgURL} alt="pic" class="lg:max-w-md">
+                        <div class="font-serif">
+                            <div class="text-xl font-medium mb-2">{project.data.title}</div>
+                            <div class="text-gray-500 mb-4">
+                                <div class="text-sm"><span>{formatDateNoDay(project.data.startDate)}</span> - <span>{project.data.endDate ? formatDateNoDay(project.data.endDate) : 'Ongoing'}</div>
+                                {project.data.performance ? <div class="text-sm mt-1">{'Performance: ' + project.data.performance}</div> : null}
+                            </div>
+                            <div>
+                                <Content />
+                            </div>
+                        </div>
+                    </div> 
+                )
+                })}
             </div>
         ))}
 
