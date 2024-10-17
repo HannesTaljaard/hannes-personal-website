@@ -3,7 +3,7 @@ title: 'Confusion'
 startDate: 2023-12-01
 endDate: 2023-12-01
 isLongTerm: false
-imgURL: '/images/Confusion.webp'
+imgURL: '/images/projects/Confusion.webp'
 ---
 Movement artist and choreographer
 Friday 17 November 2023; Foyer of the Haydn-Saal, Universität für Musik und darstellende

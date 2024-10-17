@@ -3,7 +3,7 @@ title: 'AMBO'
 startDate: 2024-07-01
 endDate: 
 isLongTerm: true
-imgURL: '/images/AMBO.webp'
+imgURL: '/images/projects/AMBO.webp'
 ---
 Our piano duo specialises in performances that incorporate music and movement
 improvisation/composition in various forms. We also present workshops. The members are Aleksandr

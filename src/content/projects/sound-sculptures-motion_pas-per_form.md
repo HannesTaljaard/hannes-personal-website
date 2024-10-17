@@ -3,7 +3,7 @@ title: 'Sound – Sculptures – Motion / pas: per_form'
 startDate: 2023-10-01
 endDate: 2024-06-01
 isLongTerm: false
-imgURL: '/images/Sound-Sculpture-Motion.webp'
+imgURL: '/images/projects/Sound-Sculpture-Motion.webp'
 ---
 This open-ended project focused on collaborative experiences and research under the
 guidance of Prof. Stephanie Schroedter. About twenty students from the mdw and the

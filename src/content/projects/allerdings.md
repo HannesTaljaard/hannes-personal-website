@@ -3,7 +3,7 @@ title: 'allerdings'
 startDate: 2024-09-01
 endDate: 
 isLongTerm: true
-imgURL: '/images/allerdings.webp'
+imgURL: '/images/projects/allerdings.webp'
 ---
 Verein für Musik- und Bewegungsperformance (Society for Music and Movement Performances)
 

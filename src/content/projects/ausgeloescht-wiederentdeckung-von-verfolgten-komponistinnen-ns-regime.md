@@ -3,7 +3,7 @@ title: 'Ausgelöscht!? Wiederentdeckung von verfolgten Komponistinnen in der Zei
 startDate: 2023-11-01
 endDate: 2024-01-01
 isLongTerm: false
-imgURL: '/images/Ausgelöscht.webp'
+imgURL: '/images/projects/Ausgelöscht.webp'
 ---
 Friday 26 January 2024, Haydn-Saal, Universität für Musik und darstellende Kunst Wien
 Students and lecturers from the mdw worked with the music of seven female composers who

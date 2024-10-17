@@ -3,7 +3,7 @@ title: 'Kurzinthio (KlangBildKlang-Festival)'
 startDate: 2023-10-01
 endDate: 2024-05-01
 isLongTerm: false
-imgURL: '/images/main-picture.jpeg'
+imgURL: '/images/projects/Kurzinthio.webp'
 ---
 Performance: Wednesday 15 May, Brick-15, Vienna
 I worked as choreographer for the first piece on the programme (Reflejos Distantes by Karola
