@@ -89,7 +89,7 @@ const description = "Projects"; // TODO
                     <img src={project.data.imgURL} alt="pic" class="lg:max-w-md">
                     <div class="font-serif">
                         <div class="text-xl font-medium mb-2">{project.data.title}</div>
-                        <div>
+                        <div class="[&_a]:text-blue-800 [&_a]:underline [&_a]:underline-offset-8 hover:[&_a]:no-underline">
                             <Content />
                         </div>
                     </div>
@@ -112,7 +112,7 @@ const description = "Projects"; // TODO
                                 <div class="text-sm"><span>{formatDateNoDay(project.data.startDate)}</span> - <span>{project.data.endDate ? formatDateNoDay(project.data.endDate) : 'Ongoing'}</div>
                                 {project.data.performance ? <div class="text-sm mt-1">{'Performance: ' + project.data.performance}</div> : null}
                             </div>
-                            <div>
+                            <div class="[&_a]:text-blue-800 [&_a]:underline [&_a]:underline-offset-8 hover:[&_a]:no-underline">
                                 <Content />
                             </div>
                         </div>
