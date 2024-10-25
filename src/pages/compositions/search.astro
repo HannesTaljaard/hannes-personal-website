@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import SearchForm from "../../components/SearchForm.astro";
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
-import sectionPicture from '../../images/section-picture.jpg';
+import ribbonCompositions from '../../images/Ribbon-2-Compositions.webp';
 import { getCollection } from "astro:content";
 import { NAME } from "../../constants";
 
@@ -15,7 +15,7 @@ const description = "Search Results"; // TODO
 
 <Layout title ={title}, description={description} current="compositions">
     <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
-        <Image src={sectionPicture} alt="Section Picture" />
+        <Image src={ribbonCompositions} alt="Ribbon Compositions" />
 
         <h1 class="text-5xl font-bold mt-10 mb-6">Compositions</h1>
         
@@ -75,13 +75,9 @@ const description = "Search Results"; // TODO
             const { title, subtitle, year, slug } = result.item;
             return `
             <div class="font-serif">
-                <a href=/compositions/${slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
+                <div class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2">
                     <span>${title} (${year})</span>
-                    <svg class="group-hover:translate-x-1 transition duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M13 18.75a.74.74 0 0 1-.53-.22a.75.75 0 0 1 0-1.06L17.94 12l-5.47-5.47a.75.75 0 0 1 1.06-1.06l6 6a.75.75 0 0 1 0 1.06l-6 6a.74.74 0 0 1-.53.22" />
-                        <path fill="currentColor" d="M19 12.75H5a.75.75 0 0 1 0-1.5h14a.75.75 0 0 1 0 1.5" />
-                    </svg>
-                </a>
+                </div>
                 <span class="italic text-lg">${subtitle}</span>
             </div>`;
         }).join("");
