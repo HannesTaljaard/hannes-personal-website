@@ -1,7 +1,7 @@
 ---
 kind: 'composition-performance'
 title: 'Setude 3'
-performer: ['Hannes Taljaard, ???']
+performer: ['Hannes Taljaard, Movement']
 performanceDate: 2021-03-27
 location: 'Museumsquartier | Dschungl'
 ---

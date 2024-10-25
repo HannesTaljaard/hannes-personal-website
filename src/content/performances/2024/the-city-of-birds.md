@@ -1,7 +1,7 @@
 ---
 kind: 'performance'
 title: 'The City of Birds'
-performer: ['Hannes Taljaard, ???']
+performer: ['Hannes Taljaard, Sound and Movement Improvisation']
 performanceDate: 2024-05-16
 location: 'Festivalgelände am Nordwestbahnhof'
 ---

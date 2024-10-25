@@ -9,7 +9,6 @@ The first piece, titled *Vienna*, recreates a seminal experience from my years o
 
 <figure>
     <img src="/images/my-thoughts/self-directed-process-diagram.png" alt="Dialogue Diagram" />
-    <figcaption>Caption: TODO</figcaption>
 </figure>
 
 A framework grew from my research, and it describes my learning path:

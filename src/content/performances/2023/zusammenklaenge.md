@@ -1,7 +1,7 @@
 ---
 kind: 'performance'
 title: 'Zusammenklänge'
-performer: ['Hannes Taljaard, ???']
+performer: ['Hannes Taljaard, Movement Improvisation']
 performanceDate: 2023-11-17
 location: 'Mdw | Haydn-Saal, Anton-von-Webern-Platz 1, Vienna'
 ---
