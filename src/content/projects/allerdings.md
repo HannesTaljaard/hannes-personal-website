@@ -5,6 +5,7 @@ endDate:
 isLongTerm: true
 performance: 
 imgURL: '/images/projects/allerdings.webp'
+detailsPageURL: '/projects/allerdings'
 ---
 Verein für Musik- und Bewegungsperformance (Society for Music and Movement Performances)<br><br>
 

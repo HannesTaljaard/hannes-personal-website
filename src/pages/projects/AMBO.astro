@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { NAME } from "../../constants";
+import { Image } from 'astro:assets';
+import ribbonAMBO from '../../images/Ribbon-AMBO.webp';
+import { Icon } from 'astro-icon/components'
+
+const title = 'AMBO - Project - ' + NAME;
+const description = ""; // TODO
+---
+
+<Layout title={title}, description={description}, current="projects">
+    <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
+        <Image src={ribbonAMBO} alt="Ribbon AMBO" />
+
+        <h1 class="text-3xl lg:text-5xl font-bold font-sans mt-10 mb-8">AMBO</h1>
+
+    </div>
+</Layout>

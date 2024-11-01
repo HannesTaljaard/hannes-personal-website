@@ -93,7 +93,10 @@ const description = "Projects"; // TODO
                             <Content />
                         </div>
                         <div class="mt-6 text-blue-800">
-                            <a href="/">Read More TODO</a>
+                            <a href={project.data.detailsPageURL} class="group font-sans font-medium flex items-center w-fit space-x-2 text-blue-800 hover:underline underline-offset-8">
+                                <span>Read More</span>
+                                <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
+                            </a>
                         </div>
                     </div>
                 </div>

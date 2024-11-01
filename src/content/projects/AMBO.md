@@ -5,6 +5,7 @@ endDate:
 isLongTerm: true
 performance: 
 imgURL: '/images/projects/AMBO.webp'
+detailsPageURL: '/projects/AMBO'
 ---
 Our piano duo specialises in performances that incorporate music and movement
 improvisation/composition in various forms. We also present workshops. The members are Aleksandr

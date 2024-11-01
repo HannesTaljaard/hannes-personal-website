@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { NAME } from "../../constants";
+import { Image } from 'astro:assets';
+import ribbonAllerdings from '../../images/Ribbon-Allerdings.webp';
+import { Icon } from 'astro-icon/components'
+
+const title = 'allerdings - Project - ' + NAME;
+const description = ""; // TODO
+---
+
+<Layout title={title}, description={description}, current="projects">
+    <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
+        <Image src={ribbonAllerdings} alt="Ribbon allerdings" />
+
+        <h1 class="text-3xl lg:text-5xl font-bold font-sans mt-10 mb-8">allerdings</h1>
+        
+        <div class="flex flex-col gap-4 text-base lg:text-lg font-regular font-serif mb-6 [&_a]:text-blue-800 [&_a]:underline [&_a]:underline-offset-8 hover:[&_a]:no-underline">
+            <p>We work continuously on our performances, presenting them in various venues and contexts. This means that our performances are always transforming and mutating. We also develop new performances. We are especially interested in creating new contexts, for example in terms of social interaction, and showcasing the special nature of artists that are performing from their identities as people who are active in the field of Rhythmics (also called Eurythmics). The three members of allerdings form the organisational core of our performances, and we often collaborate with other artists, especially with artists who have studied Rhythmics in the Viennese tradition of music and movement education.</p>
+
+            <p>TODO: ROW OF SMALL PHOTOS THAT CAN BE CLICKED TO DOWNLOAD </p>
+
+            <h2>Sing saam met my! (Sing with me!)</h2>
+            <p>The centre of our performance are five songs composed by Hannes Taljaard, songs about the life world of children and parents. The words of the songs are in Afrikaans (a Germanic language that originated in South Africa), and the three members of allerdings, together with Aleksandr Okhotnikov (the other member of <a href="/projects/AMBO">AMBO</a>), created a performance that aims to let audience members who do not understand Afrikaans catch the meaning of the songs, also those aspects of meaning to goes beyond words. We interweave music (voice, piano, cello and harp), movement (acting and dancing), language, objects, visual input (and in later versions also film) into an uplifting performance that brings audience members into an empathic resonance with our own childhood experiences.</p>
+            <p>The first performance of our version of four of the five songs took place on 19 November 2024 in the Alte Konzertsaal of the University of Music and performing Arts in Vienna. Photos of this performance can be downloaded here.</p>
+
+            <h2>Kleine Dinge (Small Things)</h2>
+            <p>This is a dance-based and interdisciplinary exploration of how one perceives small, often intangible aspects of life, aspects that happen concurrently and cannot always be fully perceived. We tell stories about the small things in life through dance, music, movement and language, using tangible objects as well as intangible objects. Small moments line up, interweave and form an abstract world in which many things are possible and sometimes almost nothing happens. The atmosphere changes smoothly and each viewer’s experiences of an individual world of small things are supported during interactive moments with the audience. The different ways in which different expressions and characters interact, reflects the diversity and complexity of modern life. The audience members collect individual impressions and reflect on their own ways of perceiving.</p>
+
+            <h2>Unsichtbare Koffer (Invisible Suitcase)</h2>
+            <p>This performance takes the form of a session (50 to 75 minutes) that aims to sensitize perception, and stimulate interaction among maximum twenty participants whose interaction is based upon aspects of their life-world that they voluntarily and imaginatively share into the process. The session structures performances by the participants: starting by moving through space while being supported by our improvisations, passing through the participants’ producing sounds on various suitcases (and later on various objects) into an improvisation in sound and movement that rounds of the session.</p>
+
+            <h2>Da wär noch was… (There was still something...)</h2>
+            <p>How can topics that are relevant to society and that live in the hearts and minds of a silent generation be presented? How can people living in retirement have the chance to say and to show these topics? Our process starts with works created by artists whose professional careers have already ended, and goes through collaborative workshops in music and movement, presented at old age homes in Vienna. Each workshop ends in a transdisciplinary public performance in which the residents of the old age home participate, with people living in the same part of the city as audience. During the last phase of the project, a public performance is presented which takes as basic material all of the performances with the residents of the old age homes.</p>
+        </div>
+
+
+    </div>
+</Layout>
+
+<style>
+    h2 {
+        @apply mt-6 text-xl lg:text-2xl font-semibold font-sans
+    }
+</style>
