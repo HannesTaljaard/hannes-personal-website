@@ -2,7 +2,7 @@
 import { NAME } from "../constants";
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import sectionPicture from '../images/section-picture.jpg';
+import ribbonBiography from '../images/Ribbon-I-1.webp';
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
@@ -12,7 +12,7 @@ const description = "Biography"; // TODO
 
 <Layout title = {title}, description={description} current="information">
     <div class="container max-w-[1120px] flex flex-col items-start mx-auto p-4">
-        <Image src={sectionPicture} alt="Section Picture" />
+        <Image src={ribbonBiography} alt="Ribbon Biography" />
 
         <h1 class="text-3xl lg:text-5xl font-bold font-sans mt-10 mb-8">Biography</h1>
         <a type="button" href={'/'} class="w-80 mb-12 text-center text-white bg-blue-800 hover:bg-blue-950 focus:ring-4 focus:ring-blue-400 font-medium rounded-md text-md px-5 py-2.5 me-2 dark:bg-blue-700 dark:hover:bg-blue-800 focus:outline-none dark:focus:ring-blue-950">Download Biography PDF</a>

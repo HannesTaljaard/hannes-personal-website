@@ -2,7 +2,7 @@
 import { NAME } from "../constants";
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import sectionPicture from '../images/section-picture.jpg';
+import ribbonPhotos from '../images/Ribbon-I-2.webp';
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
@@ -12,7 +12,7 @@ const description = "Photos"; // TODO
 
 <Layout title = {title}, description={description} current="information">
     <div class="container max-w-[1120px] flex flex-col items-start mx-auto p-4">
-        <Image src={sectionPicture} alt="Section Picture" />
+        <Image src={ribbonPhotos} alt="Ribbon Photos" />
 
         <h1 class="text-3xl lg:text-5xl font-bold font-sans mt-10 mb-8">Photos in High-Resolution</h1>
 

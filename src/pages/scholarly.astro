@@ -2,7 +2,7 @@
 import { NAME } from "../constants";
 import Layout from "../layouts/Layout.astro";
 import { Image } from 'astro:assets';
-import sectionPicture from '../images/section-picture.jpg';
+import ribbonScholarly from '../images/Ribbon-I-3.webp';
 // Icons managed with astro-icon + icon package (@iconify-json/ph)
 import { Icon } from 'astro-icon/components';
 import type { CollectionEntry } from "astro:content";
@@ -20,7 +20,7 @@ const description = "Scholarly"; // TODO
 
 <Layout title={title}, description={description} current="information">
     <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
-        <Image src={sectionPicture} alt="Section Picture" />
+        <Image src={ribbonScholarly} alt="Ribbon Scholarly" />
 
         <h1 class="text-3xl lg:text-5xl font-bold mt-10 mb-8">Scholarly</h1>
 
