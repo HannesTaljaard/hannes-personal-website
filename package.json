@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^5.1.2",
     "@fontsource-variable/lora": "^5.0.14",
     "@fontsource-variable/montserrat": "^5.0.17",
-    "astro": "^4.16.6",
+    "astro": "^4.16.14",
     "astro-icon": "^1.1.0",
     "flowbite": "^2.3.0",
     "fuse.js": "^7.0.0",
