@@ -15,7 +15,7 @@
     "@fontsource-variable/lora": "^5.0.14",
     "@fontsource-variable/montserrat": "^5.0.17",
     "astro": "^4.16.14",
-    "astro-icon": "^1.1.0",
+    "astro-icon": "^1.1.4",
     "flowbite": "^2.3.0",
     "fuse.js": "^7.0.0",
     "photoswipe": "^5.4.3",

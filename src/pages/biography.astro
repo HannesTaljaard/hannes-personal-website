@@ -3,6 +3,7 @@ import { NAME } from "../constants";
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import ribbonBiography from '../images/Ribbon-I-1.webp';
+import { Icon } from 'astro-icon/components'
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
@@ -15,8 +16,12 @@ const description = "Biography"; // TODO
         <Image src={ribbonBiography} alt="Ribbon Biography" />
 
         <h1 class="text-3xl lg:text-5xl font-bold font-sans mt-10 mb-8">Biography</h1>
-        <a type="button" href={'/'} class="w-80 mb-12 text-center text-white bg-blue-800 hover:bg-blue-950 focus:ring-4 focus:ring-blue-400 font-medium rounded-md text-md px-5 py-2.5 me-2 dark:bg-blue-700 dark:hover:bg-blue-800 focus:outline-none dark:focus:ring-blue-950">Download Biography as PDF</a>
-        <h3 class="mb-4 text-2xl font-bold">Short</h3>
+        <div class="mb-4 flex items-center w-fit space-x-2">
+            <h3 class="text-2xl font-bold">Short</h3>
+            <a title="Download Biography Short as PDF" href={'/assets/HannesTaljaard-ShortBio.pdf'} target="_blank">
+                <Icon class="hover:text-blue-800" name="prime--download" size={24} />
+            </a>
+        </div>
         <div class="font-serif text-base lg:text-lg mb-10 space-y-8">
             <p class="">
                 Hannes Taljaard is currently studying Masters in MBP/Rhythmik at the University of Music and Performing
@@ -52,7 +57,12 @@ const description = "Biography"; // TODO
         </div>
 
 
-        <h3 class="mb-4 text-2xl font-bold">Long</h3>
+        <div class="mb-4 flex items-center w-fit space-x-2">
+            <h3 class="text-2xl font-bold">Long</h3>
+            <a title="Download Biography Long as PDF" href={'/assets/HannesTaljaard-LongBio.pdf'} target="_blank">
+                <Icon class="hover:text-blue-800" name="prime--download" size={24} />
+            </a>
+        </div>
         <div class="font-serif text-base lg:text-lg mb-20 space-y-8">
             <p>
                 Hannes Taljaard is currently studying Masters in MBP/Rhythmik (Music and Movement Education /
