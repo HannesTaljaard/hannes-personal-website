@@ -17,7 +17,12 @@ const description = "Search Results"; // TODO
     <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
         <Image src={ribbonCompositions} alt="Ribbon Compositions" />
 
-        <h1 class="text-5xl font-bold mt-10 mb-6">Compositions</h1>
+        <a href="/compositions" class="flex items-center mt-6 space-x-2 text-blue-800 hover:underline underline-offset-8">
+            <Icon name="prime--arrow-left" />
+            <span>Back to view all Compositions</span>
+        </a>
+
+        <h1 class="text-3xl lg:text-5xl font-bold mt-6 mb-6">Compositions</h1>
         
         <SearchForm />
 

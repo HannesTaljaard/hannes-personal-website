@@ -65,12 +65,13 @@ const description = "Compositions" // TODO
                 (<a href="/compositions" class="text-blue-800 underline underline-offset-4 hover:no-underline">Here</a> you can find
                 more information on this matter.)
             </p>
-            <p>This list was last updated in August 2024.</p>
+            <p class="text-gray-500 text-xs font-sans">This list was last updated in August 2024.</p>
         </div>
 
         <SearchForm />
 
-        <ul class="flex flex-row flex-nowrap overflow-x-auto space-x-4 my-8">
+        <!-- Hide the scrollbar with: https://github.com/reslear/tailwind-scrollbar-hide -->
+        <ul class="flex flex-row flex-nowrap overflow-x-auto lg:flex-wrap lg:overflow-visible gap-4 my-8">
             {categories.map(category => (
                 <a href={'#category-' + category}>
                     <li class="flex flex-row flex-nowrap items-center space-x-1 text-gray-400 hover:text-black">
@@ -86,11 +87,12 @@ const description = "Compositions" // TODO
         <div class="flex flex-col space-y-4 mb-16">
             {orchestralCompositions.map(composition => (
                 <div class="font-serif">
-                    {/* <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8"> */}
-                    <div class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2">
-                        <span>{composition.data.title} ({composition.data.year})</span>
-                        {/* <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" /> */}
-                    </div>
+                    <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
+                        <div class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2">
+                            <span>{composition.data.title} ({composition.data.year})</span>
+                            <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
+                        </div>
+                    </a>
                     <span class="italic text-lg">{composition.data.subtitle}</span>
                 </div>
             ))}
