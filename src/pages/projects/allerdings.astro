@@ -18,7 +18,52 @@ const description = ""; // TODO
         <div class="flex flex-col gap-4 text-base lg:text-lg font-regular font-serif mb-6 [&_a]:text-blue-800 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:no-underline">
             <p>We work continuously on our performances, presenting them in various venues and contexts. This means that our performances are always transforming and mutating. We also develop new performances. We are especially interested in creating new contexts, for example in terms of social interaction, and showcasing the special nature of artists that are performing from their identities as people who are active in the field of Rhythmics (also called Eurythmics). The three members of allerdings form the organisational core of our performances, and we often collaborate with other artists, especially with artists who have studied Rhythmics in the Viennese tradition of music and movement education.</p>
 
-            <p>TODO: ROW OF SMALL PHOTOS THAT CAN BE CLICKED TO DOWNLOAD </p>
+            <!-- allerdings Photo Gallery -->
+            <div id="allerdings-gallery" class="flex flex-row flex-wrap gap-4">
+                <a
+                    href="/images/projects/allerdings/allerdings-1.jpg"
+                    data-pswp-width="3154"
+                    data-pswp-height="2103"
+                    data-cropped="true"
+                    target="_blank"
+                >
+                    <img
+                        class="aspect-square object-cover max-w-48"
+                        src="/images/projects/allerdings/allerdings-1.jpg"
+                        alt="Close-up of Hannes Taljaard's face"
+                    />
+                </a>
+
+                <a
+                    href="/images/projects/allerdings/allerdings-2.jpg"
+                    data-pswp-width="3154"
+                    data-pswp-height="2103"
+                    data-cropped="true"
+                    target="_blank"
+                >
+                    <img
+                        class="aspect-square object-cover max-w-48"
+                        src="/images/projects/allerdings/allerdings-2.jpg"
+                        alt="Close-up of Hannes Taljaard's face"
+                    />
+                </a>
+
+                <a
+                    href="/images/projects/allerdings/allerdings-3.jpg"
+                    data-pswp-width="3154"
+                    data-pswp-height="2103"
+                    data-cropped="true"
+                    target="_blank"
+                >
+                    <img
+                        class="aspect-square object-cover max-w-48"
+                        src="/images/projects/allerdings/allerdings-3.jpg"
+                        alt="Close-up of Hannes Taljaard's face"
+                    />
+                </a>
+
+            </div>
+            <div class="text-gray-500 text-xs font-sans">Click to view, right-click and then select 'Save As' to download.</div>
 
             <h2>Sing saam met my! (Sing with me!)</h2>
             <p>The centre of our performance are five songs composed by Hannes Taljaard, songs about the life world of children and parents. The words of the songs are in Afrikaans (a Germanic language that originated in South Africa), and the three members of allerdings, together with Aleksandr Okhotnikov (the other member of <a href="/projects/AMBO">AMBO</a>), created a performance that aims to let audience members who do not understand Afrikaans catch the meaning of the songs, also those aspects of meaning to goes beyond words. We interweave music (voice, piano, cello and harp), movement (acting and dancing), language, objects, visual input (and in later versions also film) into an uplifting performance that brings audience members into an empathic resonance with our own childhood experiences.</p>
@@ -43,3 +88,16 @@ const description = ""; // TODO
         @apply mt-6 text-xl lg:text-2xl font-semibold font-sans
     }
 </style>
+
+<script>
+    import PhotoSwipeLightbox from "photoswipe/lightbox";
+    import "photoswipe/style.css";
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: "#allerdings-gallery",
+        children: "a",
+        pswpModule: () => import("photoswipe"),
+    });
+
+    lightbox.init();
+</script>

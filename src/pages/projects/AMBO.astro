@@ -1,19 +1,239 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
 import { NAME } from "../../constants";
-import { Image } from 'astro:assets';
-import ribbonAMBO from '../../images/Ribbon-AMBO.webp';
-import { Icon } from 'astro-icon/components'
+import { Image } from "astro:assets";
+import ribbonAMBO from "../../images/Ribbon-AMBO.webp";
+import { Icon } from "astro-icon/components";
 
-const title = 'AMBO - Project - ' + NAME;
+const title = "AMBO - Project - " + NAME;
 const description = ""; // TODO
 ---
 
-<Layout title={title}, description={description}, current="projects">
+<Layout title={title} , description={description} , current="projects">
     <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
-        <Image src={ribbonAMBO} alt="Ribbon AMBO" />
+        <Image src={ribbonAMBO} alt="Ribbon AMBO, hands form Hannes Taljaard and Aleksandr Okhotnikov on a piano keyboard" />
 
         <h1 class="text-3xl lg:text-5xl font-bold font-sans mt-10 mb-6">AMBO</h1>
 
+        <div class="flex flex-col gap-4 text-base lg:text-lg font-regular font-serif mb-6 [&_a]:text-blue-800 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:no-underline">
+            <p>
+                <b>AMBO</b> is for us a vehicle for exploring; it is a search, something
+                like an experiment; maybe it is the creation of a path. We explore
+                the potential of our skills as pianists, movement artists, singers
+                and composers, and we experiment with various other skills that we
+                acquired during our studies in Vienna. We continuously search by
+                formulating questions to help us understand our motivation: what
+                is possible with our skills? what kinds of performances can we present?
+                how can we create socially relevant interactions with our audience?
+                Our aim is to let the format of a performance remain undecided and
+                then shape the format when we have clarified our intentions. We hope
+                to create contexts, and to not unthinkingly recreate concert formats
+                of the past. We want to create an artistic path that is unique in
+                some ways.
+            </p>
+
+            <p>
+                Aleksandr Okhotnikov and Hannes Taljaard met in the autumn of
+                2021 as students at the University of Music and performing Arts
+                in Vienna. For two years one of us occasionally experienced the
+                other perform as musician or movement artist. The first
+                opportunity to cooperate in a project came in autumn of 2023
+                with the project ‘Ausgelöscht’: the preparation and presentation
+                of two movement studies which were shaped by the collaborate
+                music analytical actions of an ensemble of ten members. More
+                projects followed in 2024, and this gave us the possibility to
+                try out ideas and roles in various groups. During these projects
+                we realised that our overlapping interests and our common
+                training in Vienna contrasted well with our very different
+                backgrounds, ideas and temperaments. The field of tension
+                created by the overlaps and contrasts is one of the engines that
+                drive our cooperation.
+            </p>
+
+            <!-- AMBO Photo Gallery -->
+            <div id="ambo-gallery" class="flex flex-row flex-wrap gap-4">
+                <a
+                    href="/images/projects/ambo/AMBO-11.jpg"
+                    data-pswp-width="3543"
+                    data-pswp-height="2362"
+                    data-cropped="true"
+                    target="_blank"
+                >
+                    <img
+                        class="aspect-square object-cover max-w-48"
+                        src="/images/projects/ambo/AMBO-11.jpg"
+                        alt="Close-up of Hannes Taljaard's face"
+                    />
+                </a>
+
+                <a
+                    href="/images/projects/ambo/AMBO-12.jpg"
+                    data-pswp-width="2362"
+                    data-pswp-height="3543"
+                    data-cropped="true"
+                    target="_blank"
+                >
+                    <img
+                        class="aspect-square object-cover max-w-48"
+                        src="/images/projects/ambo/AMBO-12.jpg"
+                        alt="Close-up of Hannes Taljaard's face"
+                    />
+                </a>
+
+                <a
+                    href="/images/projects/ambo/AMBO-13.jpg"
+                    data-pswp-width="3543"
+                    data-pswp-height="2362"
+                    data-cropped="true"
+                    target="_blank"
+                >
+                    <img
+                        class="aspect-square object-cover max-w-48"
+                        src="/images/projects/ambo/AMBO-13.jpg"
+                        alt="Close-up of Hannes Taljaard's face"
+                    />
+                </a>
+
+                <a
+                    href="/images/projects/ambo/AMBO-14.jpg"
+                    data-pswp-width="3543"
+                    data-pswp-height="2362"
+                    data-cropped="true"
+                    target="_blank"
+                >
+                    <img
+                        class="aspect-square object-cover max-w-48"
+                        src="/images/projects/ambo/AMBO-14.jpg"
+                        alt="Close-up of Hannes Taljaard's face"
+                    />
+                </a>
+
+                <a
+                    href="/images/projects/ambo/AMBO-15.jpg"
+                    data-pswp-width="3543"
+                    data-pswp-height="2362"
+                    data-cropped="true"
+                    target="_blank"
+                >
+                    <img
+                        class="aspect-square object-cover max-w-48"
+                        src="/images/projects/ambo/AMBO-15.jpg"
+                        alt="Close-up of Hannes Taljaard's face"
+                    />
+                </a>
+            </div>
+            <div class="text-gray-500 text-xs font-sans">Click to view, right-click and then select 'Save As' to download.</div>
+
+            <!-- -mb-4 - a solution to reduce the gap from the parent div - maybe another solution would be more elegant -->
+            <h2 class="-mb-4">2024</h2>
+            <h2>Sing saam met my! (Sing with me!)</h2>
+            <div class="text-gray-500 text-sm -mt-2">19 October 2024 – 19 November 2024</div>
+            <p>
+                For this performance AMBO merged with allerdings to present
+                dramatised versions of four songs composed by Hannes Taljaard.
+                The cycle with the title Sing saam met My! (Sing with me!) has
+                texts in Afrikaans, a Germanic language that developed in South
+                Africa. With our performance we aimed to experiment with the
+                artistic potential of our skills in a multicultural process. We
+                specifically wanted to immerse our (mostly German speaking)
+                audience into the world that the songs present, an audience who
+                cannot rely on a printed translation. We realised that singing
+                songs of which the words have been translated often diminishes
+                the authenticity and power of the original artistic intention.
+                And we also realised that singing the songs in their original
+                language when this language is not understood by most or even
+                all audience members, will most likely diminish the audience’s
+                experience of the songs. So, the four of us came up with various
+                solutions to the conundrum by experimenting with the tools of
+                our trade: music, movement, objects and language. Our
+                performance was the last work of a concert titled Moving Voices
+                that took place on 19 November 2024 in the Neue Konzertsaal of
+                the University for Music and performing Arts, Vienna. We plan to
+                work on further versions of this performance, and hope that this
+                work will become a part of our repertoire for several more
+                years.
+            </p>
+
+            <h2>Arena Caliente</h2>
+            <div class="text-gray-500 text-sm -mt-2">7 October 2024</div>
+            <p>
+                A composition by Aleksandr for two pianos were performed at a
+                concert in the Haydnsaal of the University for Music and
+                Performing Arts, Vienna. <b>AMBO</b> opened the concert with a flash,
+                presenting ourselves as a ‘standard’ two piano duo. However, we hoped
+                that the two different kinds of dances on which the composition is
+                based, would hint – at least to those who knew who we were – at our
+                other roles as movement artists. Judging by the reaction of the audience,
+                an experience of music as movement was created. We plan to keep this
+                composition in our repertoire as our ‘show stopper’.
+            </p>
+
+            <h2>NoWHere</h2>
+            <div class="text-gray-500 text-sm -mt-2">September 2024</div>
+            <p>
+                Hannes is composing piano duets that explore the ways in which
+                feelings can be understood as objects in time and/or in space,
+                and how we can shape our own inner world by searching for
+                different ways to relate to these feelings: after, alongside,
+                in… It is written for this intimate ensemble of two musicians
+                performing on the same instrument, so that this shaping and
+                searching will also be the shared creation of meaning by the two
+                artists and for the audience. In alignment with this aim, <b
+                    >AMBO</b
+                > is rehearsing each of the compositions even while they are being
+                composed.
+            </p>
+
+            <h2>Into piano improvisation – from movement, over interaction</h2>
+            <div class="text-gray-500 text-sm -mt-2">21 July 2024</div>
+            <p>
+                <b>AMBO</b> presented a short workshop for pianists who were attending
+                the <a href="https://arte-piano.com/" target="_blank"
+                    >International Artepiano Festival</a
+                > in Castelnuovo del Farfa in Italy. We experimented with some of
+                the many ways into improvisation, and construed our workshop on the
+                basis of our experiments. The way that we introduced in Castelnuevo
+                took specific movements that form a foundation to help musicians
+                learn rhythmic patterns, and that carry information about sound structures,
+                for example information about categories of pitch collections, as
+                well as phrases and melodic contours. The movements were embedded
+                in various forms of social interaction and musical listening. We
+                also took the manipulation of a divcerse collection of objects, combined
+                with social interaction as the input for improvisations at the piano.
+                This ensured that improvisation happened as an ensmble activity,
+                together with other musicians, and contributed to creating a joyful,
+                aesthetic experience and a rather stress free process.
+            </p>
+
+            <h2>Internationale Rhythmik Woche Wien</h2>
+            <div class="text-gray-500 text-sm -mt-2">8 – 11 July 2024</div>
+            <p>
+                <b>AMBO</b> worked as assistants in Vienna for a Eurythmics practitioner
+                from Stockholm, Eva Wedin, who presented four workshops (each lasting
+                two hours) on her ways of teaching Eurythmics. As duo, we performed
+                (piano duo and vocals) several compositions that formed part of the
+                workshops, and participated in movement phases in order to facilitate
+                interaction between participants and support Eva’s teaching.
+            </p>
+        </div>
     </div>
 </Layout>
+
+<style>
+    h2 {
+        @apply mt-6 text-xl lg:text-2xl font-semibold font-sans;
+    }
+</style>
+
+<script>
+    import PhotoSwipeLightbox from "photoswipe/lightbox";
+    import "photoswipe/style.css";
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: "#ambo-gallery",
+        children: "a",
+        pswpModule: () => import("photoswipe"),
+    });
+
+    lightbox.init();
+</script>
