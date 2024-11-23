@@ -1,9 +1,9 @@
 ---
 title: 'Inspired by Lullabies: Folk Song Arrangements by Hannes Taljaard'
-authors: ['Catrien Wentink']
+authors: ['Catrien M. Wentink']
 publishedIn: 'SAMUS Vol. 41/42, 2021/2022'
 yearPublished: 2022
-doiURL: 'https://doi.org/10.1177/87551233060240020103'
+doiURL: '/assets/SAMUS-41_42-HT-Wentink-article.pdf'
 ---
 This article analyses and discusses some of the characteristics of two sets of piano arrangements of
 traditional lullabies by the South African composer Hannes Taljaard (1971-). The deceptively simple

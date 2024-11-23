@@ -3,7 +3,7 @@ title: 'The Moving Force of Gestures: Gestural Transformation in the Seriosofrom
 authors: ['Jaco Meyer']
 publishedIn: 'SAMUS Vol. 41/42, 2021/2022'
 yearPublished: 2022
-doiURL: 'https://doi.org/10.1177/87551233060240020103'
+doiURL: '/assets/SAMUS-41_42-HT-Meyer-article.pdf'
 ---
 Hannes Taljaard’s string quartet Four Essaysis a quintessential work in the South African string
 quartet literature. Various layers of ambivalence and ambiguity in this work make it a cognitively rich

@@ -3,7 +3,7 @@ title: 'An Overview of the Choral Music of Hannes Taljaard'
 authors: ['Rudolf de Beer']
 publishedIn: 'SAMUS Vol. 41/42, 2021/2022'
 yearPublished: 2022
-doiURL: 'https://doi.org/10.1177/87551233060240020103'
+doiURL: '/assets/SAMUS-41_42-HT-De-Beer-article.pdf'
 ---
 Between 1993 and 2020 Hannes Taljaard’s contribution to new music composed is admirable in both
 quantity and quality. His choral music amounts to about an eighth of his total creative output as

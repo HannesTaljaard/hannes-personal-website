@@ -3,7 +3,7 @@ title: 'Embodiment, Consciousness, and Space-Time: Hannes Taljaard’s Setudes f
 authors: ['Bertha Spies']
 publishedIn: 'SAMUS Vol. 41/42, 2021/2022'
 yearPublished: 2022
-doiURL: 'https://doi.org/10.1177/87551233060240020103'
+doiURL: '/assets/SAMUS-41_42-HT-Spies-article.pdf'
 ---
 This tribute to the music of Hannes Taljaard, more specifically his Setudes for piano, takes sensory
 cognition as its point of departure. The performer’s immediate embodiment of the music and the

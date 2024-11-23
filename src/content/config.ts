@@ -42,7 +42,7 @@ const scholarlyCollection = defineCollection({
         authors: z.string().array(),
         publishedIn: z.string(),
         yearPublished: z.number(),
-        doiURL: z.string().url()
+        doiURL: z.string()
     })
 });
 
