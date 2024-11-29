@@ -2,7 +2,7 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const NAME = 'Hannes Taljaard';
-export const SITE_TITLE = 'Hannes Taljaard | Composer';
+export const SITE_TITLE = 'Hannes Taljaard | Composer, Pianist, Singer, Movement Artist';
 export const SITE_DESCRIPTION = 'Official Website';
 export const HOMEPAGE_URL = 'https://hannestaljaard.com';
 
