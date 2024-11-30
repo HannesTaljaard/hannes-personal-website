@@ -8,6 +8,7 @@ import { Icon } from 'astro-icon/components';
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import { formatDateNoDay } from "../../utils";
+import Contact from "../contact.astro";
 
 // All project with boolean 'isLongTerm' set to true
 const longTermProjects: CollectionEntry<'projects'>[] = (await getCollection('projects', ({data}) => {
@@ -50,25 +51,6 @@ shortTermProjects.map(project => {
 const years = Array.from(projectsPerYear.keys());
 // console.log(years);
 
-const renderedLongTermProjects = await Promise.all(
-    longTermProjects.map(async (project) => {
-        const { Content } = await project.render();
-        return { project, Content };
-    })
-);
-
-const renderedProjectsPerYear = await Promise.all(
-    Array.from(projectsPerYear.entries()).map(async ([year, projects]) => {
-        const renderedProjects = await Promise.all(
-            projects.map(async (project) => {
-                const { Content } = await project.render();
-                return { project, Content };
-            })
-        );
-        return { year, renderedProjects };
-    })
-);
-
 const title = 'Projects - ' + NAME;
 const description = "Projects"; // TODO
 ---
@@ -96,55 +78,57 @@ const description = "Projects"; // TODO
                 </a>
             ))}
         </ul>
+        
+        <!-- Seperate Long-Term handling -->
+        <h2 id={'long-term'} class="text-2xl font-bold mb-6 capitalize">Long-Term</h2>
+        <div class="flex flex-col divide-y mb-20">
+            {longTermProjects!.map(async (project) => {
+            const {Content} = await project.render();
+            return (
+                <div class="flex flex-col space-y-6 py-6 first:pt-0 last:pb-0 lg:flex-row lg:space-x-6 lg:space-y-0">
+                    <img src={project.data.imgURL} alt="pic" class="lg:max-w-md" />
+                    <div class="font-serif">
+                        <div class="text-xl font-medium mb-2">{project.data.title}</div>
+                        <div class="[&_a]:text-blue-800 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:no-underline">
+                            <Content />
+                        </div>
+                        <div class="mt-6 text-blue-800">
+                            <a href={project.data.detailsPageURL} class="group font-sans font-medium flex items-center w-fit space-x-2 text-blue-800 hover:underline underline-offset-8">
+                                <span>Read More</span>
+                                <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            );
+            })}
+        </div>
 
-                <!-- Long-Term Projects -->
-                <h2 id="long-term" class="text-2xl font-bold mb-6 capitalize">Long-Term</h2>
+        {years.map(year => (
+            <div>
+                <h2 id={'year-' + year} class="text-2xl font-bold mb-6 capitalize">{year}</h2>
                 <div class="flex flex-col divide-y mb-20">
-                    {renderedLongTermProjects.map(({ project, Content }) => (
-                        <div id={project.id} class="flex flex-col space-y-6 py-6 first:pt-0 last:pb-0 lg:flex-row lg:space-x-6 lg:space-y-0">
-                            <img src={project.data.imgURL} alt="pic" class="lg:max-w-md" />
+                    {projectsPerYear.get(year)!.map(async (project) => {
+                    const {Content} = await project.render();
+                    return (
+                        <div class="flex flex-col space-y-6 py-6 first:pt-0 last:pb-0 lg:flex-row lg:space-x-6 lg:space-y-0">
+                            <img src={project.data.imgURL} alt="pic" class="lg:max-w-md">
                             <div class="font-serif">
                                 <div class="text-xl font-medium mb-2">{project.data.title}</div>
+                                <div class="text-gray-500 mb-4">
+                                    <div class="text-sm"><span>{formatDateNoDay(project.data.startDate)}</span> - <span>{project.data.endDate ? formatDateNoDay(project.data.endDate) : 'Ongoing'}</span></div>
+                                    {project.data.performance ? <div class="text-sm mt-1">{'Performance: ' + project.data.performance}</div> : null}
+                                </div>
                                 <div class="[&_a]:text-blue-800 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:no-underline">
                                     <Content />
                                 </div>
-                                <div class="mt-6 text-blue-800">
-                                    <a href={project.data.detailsPageURL} class="group font-sans font-medium flex items-center w-fit space-x-2 text-blue-800 hover:underline underline-offset-8">
-                                        <span>Read More</span>
-                                        <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
-                                    </a>
-                                </div>
                             </div>
-                        </div>
-                    ))}
+                        </div> 
+                    );
+                    })}
                 </div>
-
-                <!-- Projects Per Year -->
-                {renderedProjectsPerYear.map(({ year, renderedProjects }) => (
-                <section id={`year-${year}`}>
-                    <h2 class="text-2xl font-bold mb-6 capitalize">{year}</h2>
-                    <div class="flex flex-col divide-y mb-20">
-                        {renderedProjects.map(({ project, Content }) => (
-                            <div class="flex flex-col space-y-6 py-6 first:pt-0 last:pb-0 lg:flex-row lg:space-x-6 lg:space-y-0">
-                                <img src={project.data.imgURL} alt="pic" class="lg:max-w-md" />
-                                <div class="font-serif">
-                                    <div class="text-xl font-medium mb-2">{project.data.title}</div>
-                                    <div class="text-gray-500 mb-4">
-                                        <div class="text-sm">
-                                            <span>{formatDateNoDay(project.data.startDate)}</span> - 
-                                            <span>{project.data.endDate ? formatDateNoDay(project.data.endDate) : 'Ongoing'}</span>
-                                        </div>
-                                        {project.data.performance ? <div class="text-sm mt-1">{'Performance: ' + project.data.performance}</div> : null}
-                                    </div>
-                                    <div class="[&_a]:text-blue-800 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:no-underline">
-                                        <Content />
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-            ))}
+            </div>
+        ))}
 
     </div>
 </Layout>
