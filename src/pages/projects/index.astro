@@ -83,14 +83,14 @@ const description = "Projects"; // TODOOO
             <!-- Seperate Long-Term handling -->
             <a href={'#long-term'}>
                 <li class="flex flex-row flex-nowrap items-center space-x-1 text-gray-400 hover:text-black">
-                    <span class="uppercase text-nowrap">Long-Term</span>
+                    <span class="uppercase text-nowrap whitespace-nowrap">Long-Term</span>
                     <Icon name="prime--arrow-down" />
                 </li>
             </a>
             {years.map(year => (
                 <a href={'#year-' + year}>
                     <li class="flex flex-row flex-nowrap items-center space-x-1 text-gray-400 hover:text-black">
-                        <span class="uppercase text-nowrap">{year}</span>
+                        <span class="uppercase text-nowrap whitespace-nowrap">{year}</span>
                         <Icon name="prime--arrow-down" />
                     </li>
                 </a>
