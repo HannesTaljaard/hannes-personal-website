@@ -45,7 +45,7 @@ const description = "Performances"; // TODO
 
         <h1 class="text-3xl lg:text-5xl font-bold mt-10 mb-8">Performances</h1>
 
-        <ul class="flex flex-row flex-nowrap overflow-x-auto space-x-4 mb-8">
+        <ul class="flex flex-row flex-nowrap overflow-x-auto lg:flex-wrap lg:overflow-visible gap-4 mb-8">
             {years.map(year => (
                 <a href={'#year-' + year}>
                     <li class="flex flex-row flex-nowrap items-center space-x-1 text-gray-400 hover:text-black">
