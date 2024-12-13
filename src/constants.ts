@@ -4,7 +4,7 @@
 export const NAME = 'Hannes Taljaard';
 export const SITE_TITLE = 'Hannes Taljaard | Composer, Pianist, Singer, Movement Artist';
 export const SITE_DESCRIPTION = 'Official Website';
-export const HOMEPAGE_URL = 'https://hannestaljaard.com';
+export const HOMEPAGE_URL = 'https://www.hannestaljaard.com';
 
 // Available navigation or pages for the header navigation
 export const SITE_NAVIGATION = [

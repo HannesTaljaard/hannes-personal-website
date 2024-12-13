@@ -15,37 +15,34 @@ const description = 'Contact'; // TODO
 
         <h1 class="text-3xl lg:text-5xl font-bold mt-10 mb-8">Contact</h1>
 
-        <p class="font-serif">Email: hannes (at) hannestaljaard (dot) com</p>
+        <!-- <p class="font-serif">Email: hannes (at) hannestaljaard (dot) com</p> -->
 
         <!-- Form handling with web3forms.com -->
-        <!-- <form class="max-w-xl mb-20" action="https://api.web3forms.com/submit" method="POST">
+        <form class="max-w-xl mb-20" action="https://api.web3forms.com/submit" method="POST">
 
-          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+          <input type="hidden" name="access_key" value="185c37b3-5bfa-4aef-99bc-0c504fe4daa9">
 
             <div class="mb-5">
-                <label for="full-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full Name</label>
+                <label for="full-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
                 <input type="text" name="name" id="full-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Johannes Brahms" required />
               </div>
             <div class="mb-5">
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Address</label>
+              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
               <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="example@gmail.com" required />
             </div>
             <div class="mb-5">
-                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Message</label>
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
                 <textarea id="message" name="message" rows="8" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Message" required></textarea>
-            </div> -->
+            </div>
 
             <!-- Honeypot Spam Protection -->
-            <!-- <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-           <div class="flex items-start mb-5">
-              <div class="flex items-center h-5">
-                <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
-              </div>
-              <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">TODO - terms?</label>
-            </div>
+            <!-- Custom redirect -->
+            <input type="hidden" name="redirect" value="https://www.hannestaljaard.com/thanks">
+
             <button type="submit" class="text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send Message</button>
-        </form> -->
+        </form>
 
     </div>
 </Layout>

@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Success! Thank you for getting in touch with me.';
+const description = 'Thanks';
+---
+
+<Layout title={title}, current="contact">
+    <div class="container max-w-[1120px] flex flex-col items-center px-4 mx-auto my-10 space-y-8 sm:px-8">
+        <h1 class="text-3xl text-center">Form submitted successfully!</h1>
+        <h2 class="text-xl text-center font-serif">Thank you! The form has been submitted successfully. I will reply to you as soon as possible!</h2>
+        <a type="button" href="/" class="text-center text-white bg-blue-800 hover:bg-blue-950 focus:ring-4 focus:ring-blue-400 font-medium rounded-md text-md px-10 py-2 dark:bg-blue-700 dark:hover:bg-blue-800 focus:outline-none dark:focus:ring-blue-950">Go Home</a>
+    </div>
+</Layout>
