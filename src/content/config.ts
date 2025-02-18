@@ -7,7 +7,7 @@ const compositionCollection = defineCollection({
         subtitle: z.string(),
         year: z.number(),
         category: z.enum(['orchestral', 'chamber-music-2-3', 'chamber-music-4', 'choir', 'vocal', 'solo-instrumental']),
-        scoreURL: z.string().url()
+        scoreURL: z.string().url().optional()
     })
 });
 

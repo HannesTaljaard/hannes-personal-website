@@ -44,8 +44,9 @@ const description = entry.data.title // TODO
     <div class="container max-w-[1120px] text-pretty flex flex-col items-start mx-auto p-4">
         <h1 class="text-3xl lg:text-5xl font-bold font-sans mt-8 mb-2">{entry.data.title} <span class="font-normal">({entry.data.year})</span></h1>
         <span class="font-serif text-lg lg:text-xl mb-6">{entry.data.subtitle}</span>
-        <a type="button" href={entry.data.scoreURL} class="w-48 text-center text-white bg-blue-800 hover:bg-blue-950 focus:ring-4 focus:ring-blue-400 font-medium rounded-md text-md px-5 py-2.5 me-2 mb-6 dark:bg-blue-700 dark:hover:bg-blue-800 focus:outline-none dark:focus:ring-blue-950">Download Score</a>
-        <div class="prose prose-base lg:prose-lg max-w-none font-serif prose-headings:text-black prose-p:text-black prose-a:text-blue-800 prose-a:underline prose-a:underline-offset-4 hover:prose-a:no-underline">
+        {entry.data.scoreURL ? <a type="button" href={entry.data.scoreURL} class="w-48 text-center text-white bg-blue-800 hover:bg-blue-950 focus:ring-4 focus:ring-blue-400 font-medium rounded-md text-md px-5 py-2.5 me-2 mb-6 dark:bg-blue-700 dark:hover:bg-blue-800 focus:outline-none dark:focus:ring-blue-950">Download Score</a> : null}
+        
+        <div class="mb-20 prose prose-base lg:prose-lg max-w-none font-serif prose-headings:text-black prose-p:text-black prose-a:text-blue-800 prose-a:underline prose-a:underline-offset-4 hover:prose-a:no-underline prose-ol:text-black prose-ul:text-black">
             <Content/>
         </div>
     </div>
