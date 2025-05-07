@@ -13,4 +13,6 @@ Okhotnikov and Hannes Taljaard. We are improvisers, composers, movement artists 
 These four roles shape our subprojects, as do our training in the Viennese tradition of music and
 movement education. Our first public performance took place in Vienna during the Internationale
 Rhythmik Woche Wien in July 2024, and this was followed by a workshop presented in Castelnuovo
-del Farfa (Italy) on 21 July 2024 as part of the ArtePiano International Festival and Competition.
+del Farfa (Italy) on 21 July 2024 as part of the ArtePiano International Festival and Competition.<br><br>
+
+Our most extensive project to date was a four week tour to South Africa in February and March 2025. We worked as guest lecturers at universities in Cape Town, Stellenbosch, Pretoria and Potchefstroom, and a high school in Johannesburg. We taught mainly piano improvisation, but also music education and movement technique & improvisation.
