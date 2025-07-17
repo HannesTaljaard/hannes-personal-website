@@ -53,4 +53,4 @@ For the time that you loved me, I thank you, and I wish for you that you may fin
 
 This is an original composition for two voice parts and one or more cellos. The cello line can also be sung by very low basses. The upper vocal part can be sung by all female voices (or by sopranos only), and the lower part by high male voices (or by altos).
 
-The text of this composition is in Afrikaans, and very simple: “Slaap, my kindjie, slaap!” (Sleep, my little child, sleep!) The piece uses three twelve-tone melodies, but the simple three-part texture uses consonant triads. The piece is in three sections, and each section can be repeated as many times as the choir wishes.
+The text of this composition is in Afrikaans, and very simple: “Slaap, my kindjie, slaap!” (Sleep, my little child, sleep!) The piece uses three twelve-tone melodies, but the simple three-part texture uses consonant triads. The piece is in three sections, and each section can be repeated as many times as the choir wishes. Christine Pichler studied BA with me in Vienna, and she was the one who first had the idea of composing a lullaby using a twelve-tone row.

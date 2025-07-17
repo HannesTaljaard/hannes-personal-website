@@ -13,9 +13,9 @@ musicians to present the works more often. Students from our institute for music
 movement education worked on two contrasting compositions and in contrasting ways under
 the guidance of Irmgard Bankl. My roles took as foundations my analyses of the
 compositions and my responsibility for structuring parts of the rehearsals based on the
-experiences of the group of movement artists. For Rêverie for piano by Germain Taillefaire
+experiences of the group of movement artists. For *Rêverie* for piano by Germain Taillefaire
 we developed a concept for a structured movement improvisation that took as its basic
 inspiration the common denominators of our experiences of opposing forces in the music. For
-the third movement of Trialogues by Wally Weigl (for flute, viola and harp), we developed a
+the third movement of *Trialogues* by Wally Weigl (for flute, viola and harp), we developed a
 choreography in the tradition of plastique animé. Our aim with this choreography were to
 clarify the tonal and thematic processes of the composition.

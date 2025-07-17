@@ -5,7 +5,7 @@ year: 2012
 category: 'choir'
 ---
 
-Parts of the melody of this composition are derived from the tune of a well-known isiZulu lullaby, Thula Thu’. Kleine Mensie, Liewe Kindjie is one of more than ten lullabies that I have composed or arranged these last twenty years while exploring the fascinating inwardness/outwardness we experience when singing lullabies. By using parts of a beautiful melody originating in one South African language to express deeply felt personal ideas in another one of our languages (and an original own melody), I hope to contribute to our building a world of understanding and compassion.
+Parts of the melody of this composition are derived from the tune of a well-known isiZulu lullaby, Thula Thu’. Kleine Mensie, Liewe Kindjie is one of more than ten lullabies that I have composed or arranged until now as a way of exploring the fascinating inwardness/outwardness we experience when singing lullabies. By using parts of a beautiful melody originating in one South African language to express deeply felt personal ideas in another one of our languages (and an original own melody), I hope to contribute to our building a world of understanding and compassion.
 
 Slaap, kleine mensie, slapies!  
 Slaap, liewe kindjie, slaap!  

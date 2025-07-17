@@ -14,6 +14,6 @@ Not performed
 
 Duration: c. 10’
 
-*This composition is a virtuoso piece for the pianist and for the orchestra. It starts energetic, like a
+This composition is a virtuoso piece for the pianist and for the orchestra. It starts energetic, like a
 sand storm, calms down, and then returns to its original state. When I was composing this concerto,
-the story by Paolo Coelho, The Alchemist, was often in my thoughts.*
+the story by Paolo Coelho, *The Alchemist*, was often in my thoughts.

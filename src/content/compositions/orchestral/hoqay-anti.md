@@ -14,11 +14,11 @@ Not performed
 
 Duration: c. 8’
 
-*The composition is in the style of Scott Joplin’s Piano Rags, and is based upon three South African
+The composition is in the style of Scott Joplin’s Piano Rags, and is based upon three South African
 folk songs (of which the words are in Afrikaans). It is not easy to recognise the original folk songs.
 The piece is a brisk Rondo of which the refrain is upbeat and lively. During the episodes some
 orchestra members change places with others, in order to create a lively interaction that matches the
 music. I have written “rules of the game” for the interaction, but these can be adapted, or new rules
 can be invented. It is also possible to perform the composition as a standard orchestral work, with
-every musician remaining in place.*
+every musician remaining in place.
 
