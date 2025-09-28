@@ -11,3 +11,5 @@ I wanted to write virtuoso pieces for both performers, which would challenge and
 
 All that can be counted c. 5 minutes  
 All that counts c. 4’30”
+
+Total duration c. 9"30"

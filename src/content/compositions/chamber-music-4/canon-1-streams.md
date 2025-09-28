@@ -9,3 +9,4 @@ If the composition is performed by four flutists or fewer, the tape part must be
 
 The composition is based upon the English folk song *The Water is wide*, which I learned in Benjamin Britten’s arrangement during the years when I was accompanying singers in South Africa. I think of my version as an augmentation of the inner world of a person singing this song in an authentic way – singing from their own lived world.
 
+The total duration is not defined.
