@@ -5,4 +5,4 @@ performer: ['Savaria Symphonie Orchester', 'Webern Kammerchor' ]
 performanceDate: 2025-10-06
 location: 'Grosser Saal, Musikverein | Musikvereinsplatz 1, 1010 Vienna'
 ---
-The Webern chamber choir added a few extra singers for this concert, and I will join the bass section.
+The Webern chamber choir added a few extra singers for this concert, and I joined the bass section.
