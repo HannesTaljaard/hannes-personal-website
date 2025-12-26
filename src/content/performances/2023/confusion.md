@@ -5,4 +5,4 @@ performer: ['Samuel Eder, Clarinet', 'Viktoria Razdevsek, Oboe', 'Ferenc Takacs,
 performanceDate: 2023-11-17
 location: 'Mdw | Staircase in the Foyer, Anton-von-Webern-Platz 1, Vienna'
 ---
-A movement improvisation (to the last part of the composition) performed by Elena Perkhofer, Hannes Taljaard, Hongshan Bi, Tina Zierhofer, YueJia Zhu and Xaver Duntze, part of the Festwoche Musikpädagogik
+I developed and directed a movement improvisation to the last part of the composition. It was performed by Elena Perkhofer, Hannes Taljaard, Hongshan Bi, Tina Zierhofer, YueJia Zhu and Xaver Duntze, part of the Festwoche Musikpädagogik.

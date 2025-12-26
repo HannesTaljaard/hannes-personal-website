@@ -5,4 +5,4 @@ performer: ['Hannes Taljaard, Movement']
 performanceDate: 2021-03-27
 location: 'Museumsquartier | Dschungl'
 ---
-Solo choreography performed to a recording of Setude 3, as performed by Jeffrey Jacob, part of the concert *Kann jemand bitte die Bühne freigeben?*
+I performed my solo choreography to a recording of my piano composition <i>Setude 3</i>, as part of the concert *Kann jemand bitte die Bühne freigeben?*. The recording of my piano composition was released by Jefrrey Jacob in 2008.
