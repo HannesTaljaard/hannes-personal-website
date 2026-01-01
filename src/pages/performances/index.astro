@@ -16,6 +16,16 @@ const allPerformances: CollectionEntry<'performances'>[] = (await getCollection(
 
 const performancesPerYear = new Map<string, CollectionEntry<'performances'>[]>();
 
+// For debuging purposes
+// for (const p of allPerformances) {
+//   console.log(
+//     p.slug,
+//     p.data.performanceDate,
+//     typeof p.data.performanceDate,
+//     p.data.performanceDate instanceof Date
+//   );
+// }
+
 allPerformances.map(performance => {
     if (performancesPerYear.has(performance.data.performanceDate.getFullYear())) {
         let performancesPerOneYear: CollectionEntry<'performances'>[] = performancesPerYear.get(performance.data.performanceDate.getFullYear())!;

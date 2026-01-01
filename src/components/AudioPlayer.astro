@@ -1,0 +1,77 @@
+---
+interface Props {
+  src: string;
+  title: string;
+}
+
+const { src, title } = Astro.props;
+---
+
+<div class="inline-block align-middle ml-1 mb-0.5">
+  <button 
+    class="play-button w-6 h-6 rounded-full bg-blue-800 hover:bg-blue-900 text-white flex items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+    data-audio-src={src}
+    aria-label={`Play ${title}`}
+  >
+    <span class="play-icon block">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+    </span>
+    <span class="stop-icon hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6 6h12v12H6z"/>
+      </svg>
+    </span>
+  </button>
+</div>
+
+<script>
+  let currentAudio: HTMLAudioElement | null = null;
+  let currentButton: HTMLButtonElement | null = null;
+
+  document.querySelectorAll('.play-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const src = (button as HTMLButtonElement).dataset.audioSrc;
+      const playIcon = button.querySelector('.play-icon');
+      const stopIcon = button.querySelector('.stop-icon');
+      
+      // If there's already an audio playing and we click a different button
+      if (currentAudio && currentButton && currentButton !== button) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        // Reset previous button icons
+        currentButton.querySelector('.play-icon')?.classList.remove('hidden');
+        currentButton.querySelector('.stop-icon')?.classList.add('hidden');
+      }
+
+      // If this is the current playing audio
+      if (currentAudio && currentButton === button) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+        currentButton = null;
+        playIcon?.classList.remove('hidden');
+        stopIcon?.classList.add('hidden');
+        return;
+      }
+
+      // Play new audio
+      if (src) {
+        currentAudio = new Audio(src);
+        currentButton = button as HTMLButtonElement;
+        currentAudio.play();
+        playIcon?.classList.add('hidden');
+        stopIcon?.classList.remove('hidden');
+
+        // When audio ends, reset the button
+        currentAudio.addEventListener('ended', () => {
+          playIcon?.classList.remove('hidden');
+          stopIcon?.classList.add('hidden');
+          currentAudio = null;
+          currentButton = null;
+        });
+      }
+    });
+  });
+</script>

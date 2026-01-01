@@ -55,9 +55,9 @@ const myThoughtsCollection = defineCollection({
 });
 
 export const collections = {
-    'composition': compositionCollection,
-    'performance': performanceCollection,
-    'project': projectCollection,
+    'compositions': compositionCollection,
+    'performances': performanceCollection,
+    'projects': projectCollection,
     'scholarly': scholarlyCollection,
-    'mythoughts': myThoughtsCollection
+    'my-thoughts': myThoughtsCollection
 }
