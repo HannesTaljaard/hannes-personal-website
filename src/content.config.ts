@@ -1,4 +1,5 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { z } from 'astro/zod';
 
 const compositionCollection = defineCollection({
     type: 'content',
@@ -7,7 +8,7 @@ const compositionCollection = defineCollection({
         subtitle: z.string(),
         year: z.number(),
         category: z.enum(['orchestral', 'chamber-music-2-3', 'chamber-music-4', 'choir', 'vocal', 'solo-instrumental']),
-        scoreURL: z.string().url().optional()
+        scoreURL: z.string().optional()
     })
 });
 
@@ -27,11 +28,11 @@ const projectCollection = defineCollection({
     schema: z.object({
         title: z.string(),
         startDate: z.date(),
-        endDate: z.date().optional(),
+        endDate: z.date().nullable().optional(),
         isLongTerm: z.boolean(),
-        performance: z.string().optional(),
-        imgURL: z.string().url(),
-        detailsPageURL: z.string().url().optional()
+        performance: z.string().nullable().optional(),
+        imgURL: z.string(),
+        detailsPageURL: z.string().optional()
     })
 });
 

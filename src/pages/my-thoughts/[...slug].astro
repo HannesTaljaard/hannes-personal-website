@@ -1,12 +1,11 @@
 ---
 import { NAME } from "../../constants";
 import Layout from '../../layouts/Layout.astro';
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 // Icons managed with astro-icon + icon package (@iconify-json/ph)
 import { Icon } from 'astro-icon/components';
 import readingTime from 'reading-time';
-import type { MarkdownContent } from "astro";
 import { formatDateNoDay } from "../../utils";
 
 // Static Website Aproach
@@ -15,7 +14,7 @@ export async function getStaticPaths() {
 
     return myThoughts.map(article => ({
         params: {
-            slug: article.slug
+            slug: article.id
         },
         props: {article}
     }));
@@ -23,7 +22,7 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 // https://docs.astro.build/en/tutorials/add-content-collections/#generate-pages-from-a-collection
-const { Content } = await article.render();
+const { Content } = await render(article);
 
 const title = article.data.name + ' - ' + NAME;
 const description = article.data.name; // TODO
@@ -45,7 +44,7 @@ const description = article.data.name; // TODO
                 <span class="mx-1">&middot;</span>
                 <span>{ formatDateNoDay(article.data.datePublished) }</span>
                 <span class="mx-1">&middot;</span>
-                <span>{ readingTime(article.body).text }</span>
+                <span>{ readingTime(article.body ?? "").text }</span>
             </div>
 
             <div class="prose prose-base lg:prose-lg max-w-none font-serif prose-headings:text-black prose-p:text-black prose-a:text-blue-800 prose-a:underline prose-a:underline-offset-4 hover:prose-a:no-underline">

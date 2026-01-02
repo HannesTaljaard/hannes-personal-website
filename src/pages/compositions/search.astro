@@ -4,7 +4,6 @@ import SearchForm from "../../components/SearchForm.astro";
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 import ribbonCompositions from '../../images/Ribbon-2-Compositions.webp';
-import { getCollection } from "astro:content";
 import { NAME } from "../../constants";
 
 // const searchQuery: string | null = Astro.url.searchParams.get('search_query');
@@ -77,12 +76,18 @@ const description = "Search Results"; // TODO
 
     function generateSearchList(results: any) {
         return results.map((result: any) => {
-            const { title, subtitle, year, slug } = result.item;
+            const { id, title, subtitle, year } = result.item;
             return `
             <div class="font-serif">
-                <div class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2">
-                    <span>${title} (${year})</span>
-                </div>
+                <a href="/compositions/${id}" class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
+                    <div class="group text-xl font-semibold flex items-center w-fit space-x-2">
+                        <span>${title} (${year})</span>
+                        <svg class="group-hover:translate-x-1 transition duration-300 ease-in-out min-w-5 min-h-5" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 18.75a.74.74 0 0 1-.53-.22a.75.75 0 0 1 0-1.06L17.94 12l-5.47-5.47a.75.75 0 0 1 1.06-1.06l6 6a.75.75 0 0 1 0 1.06l-6 6a.74.74 0 0 1-.53.22" />
+                            <path d="M19 12.75H5a.75.75 0 0 1 0-1.5h14a.75.75 0 0 1 0 1.5" />
+                        </svg>
+                    </div>
+                </a>
                 <span class="italic text-lg">${subtitle}</span>
             </div>`;
         }).join("");

@@ -7,7 +7,7 @@ async function getCompositions() {
 
     // return only necessarry data without the content
     return allCompositions.map((composition) => ({
-        slug: composition.slug,
+        id: composition.id,
         title: composition.data.title,
         subtitle: composition.data.subtitle,
         year: composition.data.year,

@@ -6,7 +6,7 @@ import ribbonPerformances from '../../images/Ribbon-3-Performances.webp';
 // Icons managed with astro-icon + icon package (@iconify-json/ph)
 import { Icon } from 'astro-icon/components';
 import type { CollectionEntry } from "astro:content";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import { formatDate } from "../../utils";
 
 // Sorted by Date descending
@@ -19,7 +19,7 @@ const performancesPerYear = new Map<string, CollectionEntry<'performances'>[]>()
 // For debuging purposes
 // for (const p of allPerformances) {
 //   console.log(
-//     p.slug,
+//     p.id,
 //     p.data.performanceDate,
 //     typeof p.data.performanceDate,
 //     p.data.performanceDate instanceof Date
@@ -27,13 +27,14 @@ const performancesPerYear = new Map<string, CollectionEntry<'performances'>[]>()
 // }
 
 allPerformances.map(performance => {
-    if (performancesPerYear.has(performance.data.performanceDate.getFullYear())) {
-        let performancesPerOneYear: CollectionEntry<'performances'>[] = performancesPerYear.get(performance.data.performanceDate.getFullYear())!;
+    const year = String(performance.data.performanceDate.getFullYear());
+    if (performancesPerYear.has(year)) {
+        let performancesPerOneYear: CollectionEntry<'performances'>[] = performancesPerYear.get(year)!;
         performancesPerOneYear.push(performance);
-        performancesPerYear.set(performance.data.performanceDate.getFullYear(), performancesPerOneYear);
+        performancesPerYear.set(year, performancesPerOneYear);
         return;
     }
-    performancesPerYear.set(performance.data.performanceDate.getFullYear(), [performance]);
+    performancesPerYear.set(year, [performance]);
 });
 
 // allPerformances.map(performance => {
@@ -71,7 +72,7 @@ const description = "Performances"; // TODO
             <h2 id={'year-' + year} class="text-2xl font-bold mb-6">{year}</h2>
             <div class="flex flex-col space-y-12 mb-20">
                 {performancesPerYear.get(year)!.map(async (performance) => {
-                const {Content} = await performance.render()
+                const {Content} = await render(performance)
                 return (
                     <div class="font-serif">
                         <div class="text-sm font-sans text-gray-500 mb-2 tracking-widest">{performance.data.kind === 'composition-performance' ? 'MY COMPOSITION & MY PERFORMANCE' : 'MY ' + performance.data.kind.toUpperCase()}</div>

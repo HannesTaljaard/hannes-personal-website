@@ -1,7 +1,7 @@
 ---
 import { NAME } from "../../constants";
 import Layout from '../../layouts/Layout.astro';
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
 // Static Website Aproach
@@ -10,14 +10,14 @@ export async function getStaticPaths() {
 
     return allCompositions.map(entry => ({
         params: {
-            slug: entry.slug
+            slug: entry.id
         },
         props: {entry}
     }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
 // SSR (Server Site Rendered) Aproach
 // import { getEntry } from 'astro:content';

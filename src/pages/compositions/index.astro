@@ -10,7 +10,7 @@ import SearchForm from '../../components/SearchForm.astro';
 import { COMPOSITION_CATEGORIES_LIST, NAME } from '../../constants';
 import { getPrettyCategoryName } from '../../utils';
 
-const allCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions');
+// const allCompositions: CollectionEntry<'compositions'>[] = await getCollection('compositions');
 const orchestralCompositions: CollectionEntry<'compositions'>[] = (await getCollection('compositions', ({data}) => {
     return data.category.toLowerCase() === 'orchestral';
 })).sort((a:CollectionEntry<'compositions'>, b:CollectionEntry<'compositions'>) =>
@@ -87,7 +87,7 @@ const description = "Compositions" // TODO
         <div class="flex flex-col space-y-4 mb-16">
             {orchestralCompositions.map(composition => (
                 <div class="font-serif">
-                    <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
+                    <a href={'/compositions/' + composition.id} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
                         <div class="group text-xl font-semibold flex items-center w-fit space-x-2">
                             <span>{composition.data.title} ({composition.data.year})</span>
                             <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out min-w-5 min-h-5" name="prime--arrow-right" />
@@ -103,7 +103,7 @@ const description = "Compositions" // TODO
         <div class="flex flex-col space-y-4 mb-16">
             {chamberMusic23Compositions.map(composition => (
                 <div class="font-serif">
-                    <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
+                    <a href={'/compositions/' + composition.id} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
                         <div class="group text-xl font-semibold flex items-center w-fit space-x-2">
                             <span>{composition.data.title} ({composition.data.year})</span>
                             <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out min-w-5 min-h-5" name="prime--arrow-right" />
@@ -119,7 +119,7 @@ const description = "Compositions" // TODO
         <div class="flex flex-col space-y-4 mb-16">
             {chamberMusic4Compositions.map(composition => (
                 <div class="font-serif">
-                    <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
+                    <a href={'/compositions/' + composition.id} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
                         <div class="group text-xl font-semibold flex items-center w-fit space-x-2">
                             <span>{composition.data.title} ({composition.data.year})</span>
                             <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out min-w-5 min-h-5" name="prime--arrow-right" />
@@ -135,7 +135,7 @@ const description = "Compositions" // TODO
         <div class="flex flex-col space-y-4 mb-16">
             {choirCompositions.map(composition => (
                 <div class="font-serif">
-                    <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
+                    <a href={'/compositions/' + composition.id} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
                         <div class="group text-xl font-semibold flex items-center w-fit space-x-2">
                             <span>{composition.data.title} ({composition.data.year})</span>
                             <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out min-w-5 min-h-5" name="prime--arrow-right" />
@@ -165,7 +165,7 @@ const description = "Compositions" // TODO
         <div class="flex flex-col space-y-4 mb-16">
             {soloInstrumentalCompositions.map(composition => (
                 <div class="font-serif">
-                    <a href={'/compositions/' + composition.slug} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
+                    <a href={'/compositions/' + composition.id} class="group text-xl font-semibold mb-2 flex items-center w-fit space-x-2 hover:underline underline-offset-8">
                         <div class="group text-xl font-semibold flex items-center w-fit space-x-2">
                             <span>{composition.data.title} ({composition.data.year})</span>
                             <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out min-w-5 min-h-5" name="prime--arrow-right" />
