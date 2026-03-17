@@ -1,7 +1,7 @@
 ---
 kind: 'performance'
 title: 'Christmas Mass'
-performer: ['Hannes Taljaard, Organ & Voice', 'Georg Hart, Conductor of the church choir', 'Erica Eloff, Soprano Soloist' ]
+performer: ['Hannes Taljaard, Organ & Voice', 'Georg Hartl, Conductor of the church choir', 'Erica Eloff, Soprano Soloist' ]
 performanceDate: 2025-12-24
 location: 'Katholische Kirche | Hauptstrasse 45a 2454, Trautmannsdorf an der Leitha'
 ---
