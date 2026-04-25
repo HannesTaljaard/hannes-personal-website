@@ -13,4 +13,5 @@ sound movements were drawn systematically, and showed ‘interactional asymmetry
 Our performance was about interactions that take us into new musical terrain and a
 meaningfulness that primarily arises through the sensitizing of perception on the basis of
 conceptual understanding. I worked as artistic leader of this project which was under the leadership of Prof. Stephanie
-Schroedter, and together with Alexander Okhotnikov as artistic assistant. After the performance in November, we continued our explorations for one more semester. 
+Schroedter, and together with Alexander Okhotnikov as artistic assistant. After the performance in November, we continued our explorations for one more semester. <br><br>
+Alexander and I are continuing our work (as AMBO) on this project under the name **Pas: Trans_form**.

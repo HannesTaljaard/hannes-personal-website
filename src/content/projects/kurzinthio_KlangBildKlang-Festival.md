@@ -6,7 +6,7 @@ isLongTerm: false
 performance: 'Wednesday 15 May, Brick-15, Vienna'
 imgURL: '/images/projects/Kurzinthio.webp'
 ---
-I worked as choreographer for the first piece on the programme (Reflejos Distantes by Karola
+I worked as choreographer for the first piece on the programme <i>Reflejos Distantes</i> by Karola
 Obermüller) and as movement artist in three more performances.<br><br>
 The transdisciplinary project KORZINTHIO combined music and movement to create a
 multisensory experience for the participating artists (almost twenty students and three
