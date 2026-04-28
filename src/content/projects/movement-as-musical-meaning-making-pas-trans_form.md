@@ -14,4 +14,4 @@ Our performance was about interactions that take us into new musical terrain and
 meaningfulness that primarily arises through the sensitizing of perception on the basis of
 conceptual understanding. I worked as artistic leader of this project which was under the leadership of Prof. Stephanie
 Schroedter, and together with Alexander Okhotnikov as artistic assistant. After the performance in November, we continued our explorations for one more semester. <br><br>
-Alexander and I are continuing our work (as AMBO) on this project under the name **Pas: Trans_form**.
+Ambo´s work on this project is continued in a variety of projects that are grouped under the title Pas: Trans_form.

@@ -12,4 +12,5 @@ University for applied Arts (Vienna) explored music, movement and textiles in co
 with inputs from performance art, design, and interactive technology. One of the main aspects
 of the project were the movement workshops presented by Ingrid Gappmeier, Ingo Reulecke
 and Eva Maria Schaller. I worked as assistant in the organisation, and as improvisor in music
-and movement.
+and movement.<br><br>
+This project developed into **Movement as musical Meaning-Making (pas: trans_form)**.
