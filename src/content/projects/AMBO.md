@@ -1,6 +1,6 @@
 ---
 title: 'AMBO'
-startDate: 2024-07-01
+startDate: 2024-09-01
 endDate: 
 isLongTerm: true
 performance: 

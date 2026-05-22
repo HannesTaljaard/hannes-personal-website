@@ -12,7 +12,9 @@ import { formatDateNoDay } from "../../utils";
 // All project with boolean 'isLongTerm' set to true
 const longTermProjects: CollectionEntry<'projects'>[] = (await getCollection('projects', ({data}) => {
     return data.isLongTerm === true;
-}));
+})).sort((a: CollectionEntry<'projects'>, b: CollectionEntry<'projects'>) =>
+    b.data.startDate.getTime() - a.data.startDate.getTime()
+);
 
 // All project with boolean 'isLongTerm' set to false
 let shortTermProjects: CollectionEntry<'projects'>[] = (await getCollection('projects', ({data}) => {
@@ -107,7 +109,7 @@ const description = "Projects"; // TODOOO
                 <div class="flex flex-col divide-y mb-20">
                     {renderedLongTermProjects.map(({ project, Content }) => (
                         <div id={project.id} class="flex flex-col space-y-6 py-6 first:pt-0 last:pb-0 lg:flex-row lg:space-x-6 lg:space-y-0">
-                            <img src={project.data.imgURL} alt="pic" class="lg:max-w-md" />
+                            <img src={project.data.imgURL} alt="pic" class="h-auto object-contain lg:max-w-md lg:self-start" />
                             <div class="font-serif">
                                 <div class="text-xl font-medium mb-2">{project.data.title}</div>
                                 <div class="[&_a]:text-blue-800 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:no-underline">
@@ -131,7 +133,7 @@ const description = "Projects"; // TODOOO
                     <div class="flex flex-col divide-y mb-20">
                         {renderedProjects.map(({ project, Content }) => (
                             <div class="flex flex-col space-y-6 py-6 first:pt-0 last:pb-0 lg:flex-row lg:space-x-6 lg:space-y-0">
-                                <img src={project.data.imgURL} alt="pic" class="lg:max-w-md" />
+                                <img src={project.data.imgURL} alt="pic" class="h-auto object-contain lg:max-w-md lg:self-start" />
                                 <div class="font-serif">
                                     <div class="text-xl font-medium mb-2">{project.data.title}</div>
                                     <div class="text-gray-500 mb-4">
