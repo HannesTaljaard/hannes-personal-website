@@ -1,7 +1,7 @@
 ---
 title: 'Movement as musical Meaning-Making (pas: trans_form)'
 startDate: 2024-09-01
-endDate: 
+endDate: 2025-01-01
 isLongTerm: false
 performance: 'November 2024 (Festwoche Musikpädagogik, mdw)'
 imgURL: '/images/projects/MoMuMeMa.webp'

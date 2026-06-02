@@ -1,0 +1,46 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { NAME } from "../../constants";
+import { Image } from "astro:assets";
+import ribbonSnap from "../../images/Ribbon-snap.webp";
+import { Icon } from "astro-icon/components";
+
+const title = "Snap(!) - Project - " + NAME;
+const description = "A transdisciplinary project where dancers and musicians develop strategies to fuse performative movement with music and sound performance.";
+---
+
+<Layout title={title} , description={description} , current="projects">
+    <div class="container max-w-[1120px] flex flex-col mx-auto p-4">
+        <Image src={ribbonSnap} alt="Ribbon Snap(!)" />
+
+        <h1 class="text-3xl lg:text-5xl font-bold font-sans mt-10 mb-6">Snap(!)</h1>
+
+        <div class="flex flex-col gap-4 text-base lg:text-lg font-regular font-serif mb-6 [&_a]:text-blue-800 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:no-underline">
+            <p>
+                This page is currently under construction.
+            </p>
+
+
+
+        </div>
+    </div>
+</Layout>
+
+<style>
+    h2 {
+        @apply mt-6 text-xl lg:text-2xl font-semibold font-sans;
+    }
+</style>
+
+<script>
+    import PhotoSwipeLightbox from "photoswipe/lightbox";
+    import "photoswipe/style.css";
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: "#ambo-gallery",
+        children: "a",
+        pswpModule: () => import("photoswipe"),
+    });
+
+    lightbox.init();
+</script>
