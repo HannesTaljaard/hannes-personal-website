@@ -3,11 +3,8 @@ import { NAME } from "../constants";
 import Layout from "../layouts/Layout.astro";
 import { Image } from 'astro:assets';
 import ribbonScholarly from '../images/Ribbon-I-3.webp';
-// Icons managed with astro-icon + icon package (@iconify-json/ph)
-import { Icon } from 'astro-icon/components';
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
-import { formatDate } from "../utils";
 
 // Sorted by Date descending
 const allScholarlyEntries: CollectionEntry<'scholarly'>[] = (await getCollection('scholarly'))

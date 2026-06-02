@@ -7,7 +7,6 @@ import ribbonMyThoughts from '../../images/Ribbon-I-4.webp';
 import { Icon } from 'astro-icon/components';
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
-import { formatDate } from "../../utils";
 
 // Sorted by Date descending
 const myThoughts: CollectionEntry<'my-thoughts'>[] = (await getCollection('my-thoughts'))
