@@ -79,8 +79,10 @@ const renderedProjectsPerYear = await Promise.all(
 const title = 'Projects - ' + NAME;
 const description = "Projects"; // TODOOO
 
-const hasDetailsPage = (project: CollectionEntry<'projects'>) =>
-    typeof project.data.detailsPageURL === 'string' && project.data.detailsPageURL.trim().length > 0;
+const getDetailsPageURL = (project: CollectionEntry<'projects'>): string | undefined => {
+    const url = project.data.detailsPageURL;
+    return typeof url === 'string' && url.trim().length > 0 ? url.trim() : undefined;
+};
 ---
 
 <Layout title={title} description={description} current="projects">
@@ -118,9 +120,9 @@ const hasDetailsPage = (project: CollectionEntry<'projects'>) =>
                                 <div class="[&_a]:text-blue-800 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:no-underline">
                                     <Content />
                                 </div>
-                                {hasDetailsPage(project) ? (
+                                {getDetailsPageURL(project) ? (
                                     <div class="mt-6 text-blue-800">
-                                        <a href={project.data.detailsPageURL} class="group font-sans font-medium flex items-center w-fit space-x-2 text-blue-800 hover:underline underline-offset-8">
+                                        <a href={getDetailsPageURL(project)} class="group font-sans font-medium flex items-center w-fit space-x-2 text-blue-800 hover:underline underline-offset-8">
                                             <span>Read More</span>
                                             <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
                                         </a>
@@ -151,9 +153,9 @@ const hasDetailsPage = (project: CollectionEntry<'projects'>) =>
                                     <div class="[&_a]:text-blue-800 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:no-underline">
                                         <Content />
                                     </div>
-                                    {hasDetailsPage(project) ? (
+                                    {getDetailsPageURL(project) ? (
                                         <div class="mt-6 text-blue-800">
-                                            <a href={project.data.detailsPageURL} class="group font-sans font-medium flex items-center w-fit space-x-2 text-blue-800 hover:underline underline-offset-8">
+                                            <a href={getDetailsPageURL(project)} class="group font-sans font-medium flex items-center w-fit space-x-2 text-blue-800 hover:underline underline-offset-8">
                                                 <span>Read More</span>
                                                 <Icon class="group-hover:translate-x-1 transition duration-300 ease-in-out" name="prime--arrow-right" />
                                             </a>
