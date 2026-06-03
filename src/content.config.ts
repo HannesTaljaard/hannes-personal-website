@@ -32,7 +32,7 @@ const projectCollection = defineCollection({
         isLongTerm: z.boolean(),
         performance: z.string().nullable().optional(),
         imgURL: z.string(),
-        detailsPageURL: z.string().optional()
+        detailsPageURL: z.string().nullable().optional()
     })
 });
 
