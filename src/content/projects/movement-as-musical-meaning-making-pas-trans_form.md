@@ -8,10 +8,9 @@ imgURL: '/images/projects/MoMuMeMa.webp'
 ---
 Students from Institute 13 of the mdw presented an improvisation that started from certain
 basic assumptions of 4E cognition. We explored and then presented music as movement
-that is perceived in a multi-sensory way. The relations between body movements/dance and
-sound movements were drawn systematically, and showed ‘interactional asymmetry’.
+that is perceived in a multi-sensory way. The relations between body movements/dance and sound movements were drawn systematically, and showed ‘interactional asymmetry’.
 Our performance was about interactions that take us into new musical terrain and a
 meaningfulness that primarily arises through the sensitizing of perception on the basis of
 conceptual understanding. I worked as artistic leader of this project which was under the leadership of Prof. Stephanie
-Schroedter, and together with Alexander Okhotnikov as artistic assistant. After the performance in November, we continued our explorations for one more semester. <br><br>
-**AMBO**´s work on this project is continued in a variety of projects that are grouped under the title Pas: Trans_form.
+Schroedter, and together with Alexander Okhotnikov as artistic assistant. After the performance in November, we continued our explorations for one more semester. We concluded the project with the performance of two workshops: in Luxembourg in July 2025 at the Seventh International Conference of Dalcroze Studies; and in Vienna in September 2025 at the Symposium of the Society of Dance Research. <br><br>
+**AMBO**´s work on this project is continued in a variety of projects that are grouped under the title **Pas: Trans_form**.

@@ -1,5 +1,5 @@
 ---
-title: 'Two songs for three Insruments'
+title: 'Two songs for three Instruments'
 subtitle: 'clarinet, cello and piano'
 year: 2025
 category: 'chamber-music-2-3'
