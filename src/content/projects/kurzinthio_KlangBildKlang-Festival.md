@@ -9,8 +9,6 @@ imgURL: '/images/projects/Kurzinthio.webp'
 I worked as choreographer for the first piece on the programme <i>Reflejos Distantes</i> by Karola
 Obermüller) and as movement artist in three more performances.<br><br>
 The transdisciplinary project KORZINTHIO combined music and movement to create a
-multisensory experience for the participating artists (almost twenty students and three
-lecturers at the University of Music and performing Arts Vienna) and the audience. The
-exchange between different disciplines created new perspectives and inspired participants to
-go beyond the boundaries of traditional artistic practices. KORZINTHIO explored the music
-of female composers from the Middle Ages, the Renaissance and our time.
+multisensory experience for the participating artists (almost twenty students and three lecturers at the University of Music and performing Arts Vienna) and the audience. The exchange between different disciplines created new perspectives and inspired participants to
+go beyond the boundaries of traditional artistic practices. KORZINTHIO explored the music of female composers from the Middle Ages, the Renaissance and our time.
+For more information click [here](/assets/Kurzinthio-Programme.pdf).
