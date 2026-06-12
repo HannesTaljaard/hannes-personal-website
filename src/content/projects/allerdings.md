@@ -8,7 +8,7 @@ imgURL: '/images/projects/allerdings.webp'
 detailsPageURL: '/projects/allerdings'
 ---
 Verein für Musik- und Bewegungsperformance (Society for Music and Movement Performances)<br><br>
-
+[Instagram](https://www.instagram.com/allerdings.verein/) <br><br>
 The aim of our charitable organisation is to support and develop artistic projects in the field of music
 and movement performance. The three founding members are [Caterina Vögel](https://caterinavoegel.framer.website/), [Antonia Luksch](https://antonialuksch.framer.website/) and
 Hannes Taljaard. We are all trained in the Viennese tradition of music and movement education (sometimes called 'Wiener Rhythmik') and
