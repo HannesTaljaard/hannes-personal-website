@@ -49,8 +49,42 @@ And when I tell you ten times that I love you, you will not understand, and I wi
 
 For the time that you loved me, I thank you, and I wish for you that you may find better fortune elsewhere.</i>
 
+
 #### 4. Christine Wiegelied (2021) duration indefinite, likely about 8’30”
 
 This is an original composition for two voice parts and one or more cellos. The cello line can also be sung by very low basses. The upper vocal part can be sung by all female voices (or by sopranos only), and the lower part by high male voices (or by altos).
 
 The text of this composition is in Afrikaans, and very simple: “Slaap, my kindjie, slaap!” (Sleep, my little child, sleep!) The piece uses three twelve-tone melodies, but the simple three-part texture uses consonant triads. The piece is in three sections, and each section can be repeated as many times as the choir wishes. Christine Pichler studied BA with me in Vienna, and she was the one who first had the idea of composing a lullaby using a twelve-tone row.
+
+#### 5. Last Call to the Moon (2022) c. 5 minutes
+I wrote the text and music for this original composition in five voices, for mixed choir. In some phrases, some of the voice groups divide in two, creating textures in six and even seven parts. The part of the sopranos can also by sung by a solo female voice and in this case, the mezzo and also parts can be divided equally for the remaining choral voices.
+
+Last call to the moon! The gates are closing. This is the last call to the moon. Your time is up.
+Your eyes are not your own. Your feet have never walked.
+You hear what cannot be, and try to feel your silence. Last call to the moon!
+All these foreign words are dark and steal the breath of all those who are lost
+and all those who are waiting.
+All these empty seats fill empty places in minds that will never, never rest.
+
+Their eyes are not their own. Their feet have never walked.
+They hear what cannot be, and try to feel their silence,
+colouring pale dreams that they have kept alive, not even seeing where the lines used to be,
+journaling regrets without a reason, apologising, always without hope.
+
+#### 6. Cloud Hunter (2025) c. 5 minutes
+I wrote the text and music for this original composition in six voices, for mixed choir. The part of the sopranos cannot be sung by a solo voice.
+
+In a faraway cloud I have seen one word.
+I don't know this word, but that cloud, I know, thinks of you.
+When you see that cloud, you will know that word: you will know its sound.
+You will hear that cloud sing to you:
+"May you be loved, my love!
+We both know I'm not the one whom you will forever love, my love.
+May you know I love you well."
+
+It is hard to find clouds again.
+Just like you, I know this well. I have seen you try.
+So, I've spent my day just to draw that cloud, so that you may hear when it sings to you:
+"May you be loved, my love!
+We both know I'm not the one whom you will forever love, my love.
+May you know I love you well."
