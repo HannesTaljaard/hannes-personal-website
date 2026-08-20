@@ -3,7 +3,7 @@ title: 'Hoqay Anti'
 subtitle: 'orchestra'
 year: 2013
 category: 'orchestral'
-scoreURL: '/scores/Hoqay Anti.pdf'
+scoreURL: '/scores/Hoqay_Anti_Taljaard.pdf'
 ---
 
 Instrumentation: 2 flute, 2 oboe, 2 clarinet, 2 alto saxophone, 2 bassoon; horn, trumpet, 2 trombone,
@@ -21,4 +21,3 @@ orchestra members change places with others, in order to create a lively interac
 music. I have written “rules of the game” for the interaction, but these can be adapted, or new rules
 can be invented. It is also possible to perform the composition as a standard orchestral work, with
 every musician remaining in place.
-

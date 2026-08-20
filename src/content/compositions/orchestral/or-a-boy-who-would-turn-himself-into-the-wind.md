@@ -3,7 +3,7 @@ title: '"…or a boy who would turn himself into the wind…"'
 subtitle: 'piano and orchestra'
 year: 2007
 category: 'orchestral'
-scoreURL: '/scores/Or a Boy.pdf'
+scoreURL: '/scores/Or_a_Boy_Taljaard.pdf'
 ---
 
 Instrumentation: solo piano; 2 flute, 2 oboe (+english horn), 2 clarinet, 2 bassoon (+contra bassoon); 2
