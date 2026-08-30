@@ -1,7 +1,7 @@
 ---
 kind: 'performance'
 title: 'Re_Form'
-performer: ['Alexander Okhotnikov, Sound & Movement', 'Hannes Tajaard, Sound & Movement', 'Sharon Zhou, Sound & Movement', 'Miguel Jiménez Barranco, Sound & Movement', 'N.N., Movement', 'N.N., Movement']
+performer: ['Alexander Okhotnikov, Sound & Movement', 'Hannes Tajaard, Sound & Movement', 'Sharon Zhou, Sound & Movement', 'Miguel Jiménez Barranco, Sound & Movement', 'Kim Muller, Movement', 'N.N., Movement']
 performanceDate: 2026-10-02
 location: 'Mdw | Haydn-Saal, Anton-von-Webern-Platz 1, Vienna'
 ---

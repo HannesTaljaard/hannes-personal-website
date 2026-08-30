@@ -1,7 +1,7 @@
 ---
 kind: 'composition-performance'
 title: 'The Space between us'
-performer: ['Hannes Taljaard, Movement & Sound & Composition', 'Alexander Okhotnikov, Sound & Movement', 'Sharon Zhou, Violin', 'Miguel Jiménez Barranco, Viola', 'N.N., Movement', 'N.N., Movement']
+performer: ['Hannes Taljaard, Movement & Sound & Composition', 'Alexander Okhotnikov, Sound & Movement', 'Sharon Zhou, Violin', 'Miguel Jiménez Barranco, Viola', '<Aaron Josi Sternbauer, Movement']
 performanceDate: 2026-10-02
 location: 'Mdw | Haydn-Saal, Anton-von-Webern-Platz 1, Vienna'
 ---
