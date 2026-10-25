@@ -3,6 +3,7 @@ title: 'of the world, parts that cannot exist'
 subtitle: 'violin and piano'
 year: 2019
 category: 'chamber-music-2-3'
+scoreURL: '/scores/of_the_world_Taljaard.pdf'
 ---
 
 This composition is the first in a group of pieces that I am composing. The group is called 'Worldsmiths'.
