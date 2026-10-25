@@ -12,7 +12,7 @@ I wanted to write virtuoso pieces for both performers, which would challenge and
 #### 1. All that can be counted 
 Duration c. 5 minutes
 <div class="not-prose mt-4 mb-8">
-  <a class="inline-flex w-fit items-center rounded-md bg-blue-800 px-5 py-2.5 font-sans text-base font-medium text-white no-underline hover:bg-blue-950 focus:outline-none focus:ring-4 focus:ring-blue-400" href="/scores/All+that_can_be_counted_Taljaard.pdf" download>Download Score</a>
+  <a class="inline-flex w-fit items-center rounded-md bg-blue-800 px-5 py-2.5 font-sans text-base font-medium text-white no-underline hover:bg-blue-950 focus:outline-none focus:ring-4 focus:ring-blue-400" href="/scores/All_that_can_be_counted_Taljaard.pdf" download>Download Score</a>
 </div>
 
 #### 2. All that counts 
