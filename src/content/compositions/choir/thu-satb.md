@@ -12,9 +12,11 @@ This composition is an arrangement of two isiZulu lullabies that have been very 
 
 Total duration c. 6’30”
 
-#### Thula Sthandwa
+#### 1.Thula Sthandwa
+<div class="not-prose mt-4 mb-8">
+  <a class="inline-flex w-fit items-center rounded-md bg-blue-800 px-5 py-2.5 font-sans text-base font-medium text-white no-underline hover:bg-blue-950 focus:outline-none focus:ring-4 focus:ring-blue-400" href="/scores/Thula_Sthandwa_mixed_choir_Taljaard.pdf" download>Download Score</a>
+</div>
 Thula, sthandwa sam  
-
 Thula, sthandwa sami  
 Thula, sthandwa senhliziyoyami  
 
@@ -26,7 +28,10 @@ Mgenhliziyo yami
 Death, you are a thief for stealing  
 the one I love with all my heart!</i>
 
-#### Thula Thu
+#### 2.Thula Thu
+<div class="not-prose mt-4 mb-8">
+  <a class="inline-flex w-fit items-center rounded-md bg-blue-800 px-5 py-2.5 font-sans text-base font-medium text-white no-underline hover:bg-blue-950 focus:outline-none focus:ring-4 focus:ring-blue-400" href="/scores/Thula_Thu_mixed_choir_Taljaard.pdf" download>Download Score</a>
+</div>
 Thula thu' thula mntwana,  
 thula sana.  
 Thul' umam' uzofika ekuseni.  
