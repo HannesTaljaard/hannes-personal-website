@@ -3,6 +3,7 @@ title: 'parts of the world we can only imagine'
 subtitle: 'viola and piano'
 year: 2019
 category: 'chamber-music-2-3'
+scoreURL: '/scores/Parts_of_the_world_Taljaard.pdf'
 ---
 
 This composition is the second in the group of compositions called 'Worldsmiths'.
