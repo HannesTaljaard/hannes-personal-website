@@ -21,7 +21,7 @@ Total duration c. 20’30”
 Performers and listeners who acquaint themselves with the various compositions that formed the source material for my Chansons à Boire will likely draw more pleasure from the composition than those who approach it unarmed.
 
 #### Préambule
-This movement is based on Francis Poulenc’s Chansons à Boire, a song for unaccompanied male voices. I made a mash-up – changing the order of material, the registers, and so on… even the harmonies.
+This movement is based on Francis Poulenc’s *Chansons à Boire*, a song for unaccompanied male voices. I made a mash-up – changing the order of material, the registers, and so on… even the harmonies.
 <div class="not-prose mt-4 mb-8">
   <a class="inline-flex w-fit items-center rounded-md bg-blue-800 px-5 py-2.5 font-sans text-base font-medium text-white no-underline hover:bg-blue-950 focus:outline-none focus:ring-4 focus:ring-blue-400" href="/scores/ChansonsAB_Preambule_Taljaard.pdf" download>Download Score</a>
 </div>

@@ -33,6 +33,8 @@ The first song tells about the children who killed a baboon and gave it to teach
 #### Yesu u funa vhana vhatuku
 This is a counting song. It was recorded in 1988 by Jaco Kruger during a performance at the Apostolic Faith Mission Church in Thsilapfene.
 
+A version with Timpani also exists.
+
 
 #### Ihi
 This song presents beautiful scene of somebody who is looking after a child whose mother went to fetch water. It is early summer, and there is little to eat, and so the baby is hungry and crying. The lullaby was recorded in 1992 by N.S. Mulaudzi during a performance by Selina Raluswinga in Mapila.
@@ -41,6 +43,7 @@ This song presents beautiful scene of somebody who is looking after a child whos
 #### Dambatshekwa
 This song also has a dance, and together the music and the movements comment on the strange way that a crab moves. The song was recorded in 1988 by Jaco Kruger during a performance at the Mafharalala Primary School in Tsianda.
 
+In the following score, the marimba part is notated for two performers.
 
 #### Thungununu
 The children are singing about the Kingfisher, a bird who is considered to be the guardian of the river. They want it to fall asleep, so that they can catch and eat it. The song was recorded in 1990 by P.S. Lukoto at the Ngwenani Primary School.
