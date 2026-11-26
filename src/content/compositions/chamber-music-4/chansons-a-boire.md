@@ -35,7 +35,7 @@ If the Préambule is a mash up, then this movement is a potpourri of parts of Po
 #### Complainte
 This movement presents one of Poulenc’s melodies. One can think of it as a reflection on, or reverberation of the previous (quasi-operatic) movement.
 <div class="not-prose mt-4 mb-8">
-  <a class="inline-flex w-fit items-center rounded-md bg-blue-800 px-5 py-2.5 font-sans text-base font-medium text-white no-underline hover:bg-blue-950 focus:outline-none focus:ring-4 focus:ring-blue-400" href="/scores/ChansonAB_Complainte_Taljaard.pdf" download>Download Score</a>
+  <a class="inline-flex w-fit items-center rounded-md bg-blue-800 px-5 py-2.5 font-sans text-base font-medium text-white no-underline hover:bg-blue-950 focus:outline-none focus:ring-4 focus:ring-blue-400" href="/scores/ChansonsAB_Complainte_Taljaard.pdf" download>Download Score</a>
 </div>
 
 #### Cadence
