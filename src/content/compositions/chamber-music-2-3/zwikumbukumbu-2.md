@@ -15,7 +15,33 @@ Some of the arrangements were recorded by the Duo ‘Fast Company’ (Andrea Bre
 2. Vhana vha Tshikolo / Thitshere washu c. 2’50” (School children / our teacher)
 3. Yesu u funa vhana vhatuku c. 2’00” (Jesus loves all the little children)
 4. Ihi c.1’30” (Ihi)
-5. Damba tsheka c. 2’10” (The crab)
+5. Dambatshekwa c. 2’10” (The crab)
 6. Thungununu c. 2’50” (The kingfisher bird)
 
 Total duration: 13’40”
+
+This composition is very close to my heart, because I worked with melodies from the magical part of South Africa where I was born: Venda. I do not know if I heard these specific melodies. Maybe it is only my imagination that made them seem familiar when I got to know them long after we left “Venda lashu”.
+
+#### Vhonani Zwidenzhe
+We are invited to look at the feet and the hands of small children who are learning domestic tasks. The singing is accompanied with a simple dance that illustrates the tasks. The song was recorded in 1988 by Jaco Kruger during a performance at the Mafharalala Primary School in Tsianda.
+
+
+#### Vhana vha Tshikolo / Thitshere washu
+The first song tells about the children who killed a baboon and gave it to teacher who grabbed it. In the second song, the children say that their teacher instructs them well: how to read, write and speak English. Vhana vha Tshikolo was recorded in 1990 by Guilty Maiwashe during a performance at the Tshishonga Primary School in Thohoyandou. Thitshere washu was recorded in 1988 by Jaco Kruger during a performance at the Mafharalala Primary School in Tsianda. 
+
+
+#### Yesu u funa vhana vhatuku
+This is a counting song. It was recorded in 1988 by Jaco Kruger during a performance at the Apostolic Faith Mission Church in Thsilapfene.
+
+
+#### Ihi
+This song presents beautiful scene of somebody who is looking after a child whose mother went to fetch water. It is early summer, and there is little to eat, and so the baby is hungry and crying. The lullaby was recorded in 1992 by N.S. Mulaudzi during a performance by Selina Raluswinga in Mapila.
+
+
+#### Dambatshekwa
+This song also has a dance, and together the music and the movements comment on the strange way that a crab moves. The song was recorded in 1988 by Jaco Kruger during a performance at the Mafharalala Primary School in Tsianda.
+
+
+#### Thungununu
+The children are singing about the Kingfisher, a bird who is considered to be the guardian of the river. They want it to fall asleep, so that they can catch and eat it. The song was recorded in 1990 by P.S. Lukoto at the Ngwenani Primary School.
+

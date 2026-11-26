@@ -17,3 +17,21 @@ The present version of the work has four movements and it was written in one uni
 4. Cadence (c. 5’00”)
 
 Total duration c. 20’30”
+
+Performers and listeners who acquaint themselves with the various compositions that formed the source material for my Chansons à Boire will likely draw more pleasure from the composition than those who approach it unarmed.
+
+#### Préambule
+This movement is based on Francis Poulenc’s Chansons à Boire, a song for unaccompanied male voices. I made a mash-up – changing the order of material, the registers, and so on… even the harmonies.
+
+
+#### Chorale
+If the Préambule is a mash up, then this movement is a potpourri of parts of Poulenc’s composition mixed with improvisations on folk songs from Auvergne. If one can imagine the stories that are told in the folk songs and the many characters who are telling their stories, this might be thought of as an opera without singers. Maybe a scenic version of this movement will be presented one day. Who knows…
+
+
+#### Complainte
+This movement presents one of Poulenc’s melodies. One can think of it as a reflection on, or reverberation of the previous (quasi-operatic) movement.
+
+
+#### Cadence
+The Cadence is an assembly of parts of two pieces by Poulenc. You could imagine that this music pokes fun in several directions. I never knew Poulenc, but I imagine that he did the same.
+
