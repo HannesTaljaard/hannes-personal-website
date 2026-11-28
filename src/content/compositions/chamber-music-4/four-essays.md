@@ -14,13 +14,20 @@ The first movement of this composition is analysed by Jaco Meyer in the article 
 
 Total duration c. 26 minutes
 
-#### Serioso
+The Essays do not have to be performed all together as a single work, and different combinations can be performed in various orders. Whether they are played individually or together, shaping the individuality of each essay is important.
+The South African composer and academic, Jaco Meyer (https://jacomeyer.com), is currently working on analyses of all four Essays. What I write below, more than twenty years after I composed the work, should not be taken as essential information about the four essays, or as the only or most important way of understanding/interpreting each of the essays. In my descriptions of each of the essays, I present variations on a metaphor, in order to create some version of a coherent perspective on the four essays as one composition. Other perspectives are also possible.
 
+#### Serioso
+Jaco Meyer’s analysis of the first essay can be accessed [here](/assets/SAMUS-41_42-HT-Meyer-article.pdf). One can think of this essay as a collaboration of multiple gestures that are creating a space – somewhat like dancing bodies. This space grows from a single point, and the gestures stretch and fold the space that is being created. They modulate the complexity and density of their space. I like to consider it a Calabi-Yau space, but I am sure that this is over-the-top and not true at all.
 
 #### Intermezzo
-
+The sounds seem to enter an existing, somewhat undefined or neutral space by giving texture to the space. I think of this space as an interpersonal space – the space between us that connects us – and I imagine that our intentions give ever-changing textures to this interpersonal space, and then our intentions shape the ways in which we move in this interpersonal space.
 
 #### Scherzo
-
+Different kinds of sound impulses stretch, shift, cut and tear a space, which either exists without the sounds, or which actually arises through the various dynamics of the sounds. One could imagine that the forceful actions in Scherzo act upon the space that was created in Serioso.
 
 #### Lyrico
+When we experience similar emotions on different occasions, they seem to accumulatively create a coherent inner space. Through various art forms, it becomes possible to share this space, even without naming it. Lyrico is sharing such a space by gradually recreating it through singing.
+
+This essay was rewritten after the first performances in September 2004, and the score that can be downloaded is of the new version.
+
